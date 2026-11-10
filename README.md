@@ -32,7 +32,7 @@ Install with [lazy.nvim](https://github.com/folke/lazy.nvim):
 }
 ```
 
-Available names: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, `findspot-petra`, `findspot-tikal`, `findspot-troy`.
+Available names: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, `findspot-petra`, `findspot-tikal`, `findspot-troy`. Each palette also has a `-swapped` variant (for example, `findspot-babylon-swapped`) that exchanges only the UI background and surface colors.
 
 ## Other applications
 
@@ -42,11 +42,11 @@ Available names: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, 
 | Alacritty | `ports/alacritty/` | Generated TOML palettes; captured in the gallery with Neovim |
 | Obsidian | `theme.css`, `manifest.json` | One community theme with six optional Style Settings palettes |
 
-**Alacritty:** import the palette you want from `ports/alacritty/` into your Alacritty configuration.
+**Alacritty:** import the palette you want from `ports/alacritty/` into your Alacritty configuration. Each palette has a matching `-swapped.toml` file that exchanges only its background and surface colors.
 
-**Obsidian:** once the Community Directory listing is approved, install *Findspot* from Community Themes. The theme includes Alexandria, Babylon, Knossos, Petra, Tikal, and Troy. Install the optional [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings) plugin to switch palettes in *Settings → Style Settings → Findspot*. Alexandria and Knossos are light palettes; Babylon, Petra, Tikal, and Troy are dark. Match Obsidian's base color scheme to the selected palette.
+**Obsidian:** once the Community Directory listing is approved, install *Findspot* from Community Themes. The theme includes Alexandria, Babylon, Knossos, Petra, Tikal, and Troy. Install the optional [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings) plugin to switch palettes in *Settings → Style Settings → Findspot*. It also includes a **Swap background and surface** toggle. This preserves the palette's colors while exchanging the two UI roles. Troy's current palette already has the darker background and lighter surface arrangement; turning the toggle on swaps it back. Alexandria and Knossos are light palettes; Babylon, Petra, Tikal, and Troy are dark. Match Obsidian's base color scheme to the selected palette.
 
-The generated `ports/obsidian/` CSS files remain available as standalone snippets. The community theme package is assembled from those same generated files, with palette selectors scoped so they do not override one another.
+The generated `ports/obsidian/` CSS files remain available as standalone snippets, including `-swapped.css` alternatives; enable only one snippet for a given palette. The community theme package is assembled from those generated files, with palette and surface selectors scoped so they do not override one another.
 
 ## Palette source and development
 
