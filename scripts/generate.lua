@@ -279,34 +279,57 @@ local function generate_alacritty(p)
 end
 
 local function generate_obsidian(p)
-  local u, a, s, st = p.ui, p.accent, p.syntax, p.status
+  local u, a, s, st, d = p.ui, p.accent, p.syntax, p.status, p.diff
   local light = luminance(u.background) > 0.2
   local target = light and "#000000" or "#ffffff"
   local hover = function(c) return mix(c, 10, target) end
   local tint = function(c, pct) return mix(c, pct, u.background) end
-
   local vars = {
     "--background-primary: " .. u.background,
+    "--background-primary-alt: " .. u.surface,
     "--background-secondary: " .. u.surface,
+    "--background-secondary-alt: " .. tint(u.surface, 92),
     "--background-modifier-border: " .. u.border,
-    "--background-modifier-hover: " .. mix(u.foreground, 6, "transparent"),
+    "--background-modifier-border-hover: " .. hover(u.border),
+    "--background-modifier-border-focus: " .. a.primary,
+    "--background-modifier-hover: " .. tint(u.foreground, 94),
+    "--background-modifier-active-hover: " .. tint(a.primary, 82),
+    "--background-modifier-box-shadow: " .. tint(u.foreground, 85),
+    "--background-modifier-success: " .. tint(st.success, 82),
+    "--background-modifier-error: " .. tint(st.error, 82),
+    "--background-modifier-error-hover: " .. tint(st.error, 72),
+    "--background-modifier-cover: " .. tint(u.background, 18),
     "--text-normal: " .. u.foreground,
-    "--text-muted: " .. s.comment,
+    "--text-muted: " .. u.muted,
     "--text-faint: " .. u.border,
-    "--text-selection: " .. u.selection,
     "--text-on-accent: " .. u.background,
+    "--text-on-accent-inverted: " .. u.foreground,
+    "--text-selection: " .. u.selection,
+    "--text-highlight-bg: " .. tint(a.secondary, 35),
+    "--text-highlight-bg-active: " .. tint(a.secondary, 48),
     "--text-accent: " .. a.primary,
     "--text-accent-hover: " .. hover(a.primary),
     "--text-error: " .. st.error,
     "--text-warning: " .. st.warning,
     "--text-success: " .. st.success,
+    "--text-info: " .. st.info,
+    "--text-hint: " .. st.hint,
+    "--interactive-normal: " .. u.surface,
+    "--interactive-hover: " .. tint(a.primary, 88),
     "--interactive-accent: " .. a.primary,
     "--interactive-accent-hover: " .. hover(a.primary),
+    "--interactive-success: " .. st.success,
+    "--interactive-warning: " .. st.warning,
+    "--interactive-error: " .. st.error,
+    "--accent-h: " .. tostring(math.floor(0)),
+    "--accent-s: " .. tostring(0) .. "%",
+    "--accent-l: " .. tostring(0) .. "%",
     "--link-color: " .. a.primary,
     "--link-color-hover: " .. hover(a.primary),
     "--link-external-color: " .. a.secondary,
     "--link-external-color-hover: " .. hover(a.secondary),
     "--link-unresolved-color: " .. u.muted,
+    "--link-unresolved-opacity: 0.8",
     "--inline-title-color: " .. a.secondary,
     "--h1-color: " .. a.primary,
     "--h2-color: " .. a.primary,
@@ -316,34 +339,98 @@ local function generate_obsidian(p)
     "--h6-color: " .. a.primary,
     "--code-background: " .. u.surface,
     "--code-normal: " .. u.foreground,
+    "--code-comment: " .. s.comment,
+    "--code-function: " .. s["function"],
+    "--code-important: " .. s.special,
+    "--code-keyword: " .. s.keyword,
+    "--code-operator: " .. s.operator,
+    "--code-property: " .. s.type,
+    "--code-punctuation: " .. s.operator,
+    "--code-string: " .. s.string,
+    "--code-tag: " .. s.special,
+    "--code-value: " .. s.number,
+    "--code-blue: " .. s.type,
+    "--code-red: " .. st.error,
+    "--code-green: " .. st.success,
+    "--code-orange: " .. st.warning,
+    "--code-purple: " .. s.constant,
     "--blockquote-border-color: " .. u.border,
     "--hr-color: " .. u.border,
     "--tag-color: " .. a.primary,
+    "--tag-color-hover: " .. hover(a.primary),
     "--tag-background: " .. tint(a.primary, 12),
     "--tag-background-hover: " .. tint(a.primary, 20),
     "--checkbox-color: " .. a.primary,
+    "--checkbox-color-hover: " .. hover(a.primary),
     "--checkbox-marker-color: " .. u.background,
-    "--text-highlight-bg: " .. tint(a.secondary, 35),
+    "--checklist-done-color: " .. u.muted,
+    "--list-marker-color: " .. u.muted,
     "--titlebar-background: " .. u.surface,
     "--titlebar-background-focused: " .. u.surface,
-    "--titlebar-text-color: " .. s.comment,
+    "--titlebar-text-color: " .. u.muted,
     "--ribbon-background: " .. u.surface,
+    "--ribbon-background-collapsed: " .. u.background,
     "--status-bar-background: " .. u.surface,
-    "--status-bar-text-color: " .. s.comment,
+    "--status-bar-text-color: " .. u.muted,
+    "--tab-text-color: " .. u.muted,
+    "--tab-text-color-active: " .. u.foreground,
+    "--tab-background-active: " .. u.background,
+    "--tab-outline-color: " .. u.border,
+    "--nav-item-color: " .. u.muted,
+    "--nav-item-color-hover: " .. u.foreground,
+    "--nav-item-color-active: " .. a.primary,
+    "--nav-item-background-hover: " .. tint(u.foreground, 94),
+    "--nav-item-background-active: " .. tint(a.primary, 88),
+    "--icon-color: " .. u.muted,
+    "--icon-color-hover: " .. u.foreground,
+    "--icon-color-active: " .. a.primary,
+    "--icon-color-focused: " .. a.secondary,
     "--scrollbar-thumb-bg: " .. mix(u.border, 50, "transparent"),
     "--scrollbar-active-thumb-bg: " .. u.border,
+    "--graph-line: " .. u.border,
+    "--graph-node: " .. u.muted,
+    "--graph-node-focused: " .. a.primary,
+    "--graph-node-tag: " .. a.secondary,
+    "--graph-node-attachment: " .. s.type,
+    "--graph-node-unresolved: " .. st.error,
+    "--canvas-background: " .. u.background,
+    "--canvas-card-label-color: " .. u.foreground,
+    "--canvas-color-1: " .. a.primary,
+    "--canvas-color-2: " .. a.secondary,
+    "--canvas-color-3: " .. st.success,
+    "--canvas-color-4: " .. st.warning,
+    "--canvas-color-5: " .. st.error,
+    "--canvas-color-6: " .. s.type,
+    "--callout-default: " .. u.muted,
+    "--callout-info: " .. st.info,
+    "--callout-tip: " .. st.success,
+    "--callout-success: " .. st.success,
+    "--callout-warning: " .. st.warning,
+    "--callout-error: " .. st.error,
+    "--callout-bug: " .. st.error,
+    "--callout-example: " .. s.type,
+    "--callout-quote: " .. u.muted,
+    "--diff-removed: " .. d.removed,
+    "--diff-added: " .. d.added,
+    "--diff-modified: " .. d.changed,
   }
 
-  local tokens = {
-    { ".token.comment, .token.prolog, .token.doctype, .token.cdata", "color: " .. s.comment .. "; font-style: italic" },
-    { ".token.string, .token.char, .token.attr-value, .token.regex", "color: " .. s.string },
-    { ".token.number", "color: " .. s.number },
-    { ".token.constant, .token.boolean, .token.symbol", "color: " .. s.constant },
-    { ".token.keyword, .token.important, .token.atrule", "color: " .. s.keyword },
-    { ".token.function", "color: " .. s["function"] .. "; font-weight: bold" },
-    { ".token.operator, .token.punctuation", "color: " .. s.operator },
-    { ".token.class-name, .token.builtin, .token.attr-name, .token.selector", "color: " .. s.type },
-    { ".token.tag", "color: " .. s.special },
+  local cm = {
+    {".cm-comment, .cm-line .cm-comment", "color: " .. s.comment .. "; font-style: italic"},
+    {".cm-string, .cm-string-2, .cm-quote", "color: " .. s.string},
+    {".cm-number, .cm-atom", "color: " .. s.number},
+    {".cm-bool, .cm-qualifier, .cm-meta", "color: " .. s.constant},
+    {".cm-keyword, .cm-control", "color: " .. s.keyword},
+    {".cm-def, .cm-function, .cm-variableName.cm-function", "color: " .. s["function"] .. "; font-weight: bold"},
+    {".cm-operator, .cm-punctuation", "color: " .. s.operator},
+    {".cm-type, .cm-className, .cm-builtin", "color: " .. s.type},
+    {".cm-tagName, .cm-tag", "color: " .. s.special},
+    {".cm-propertyName, .cm-attributeName", "color: " .. s.type},
+    {".cm-variableName", "color: " .. u.foreground},
+    {".cm-invalidchar, .cm-error", "color: " .. st.error .. "; text-decoration: underline wavy"},
+    {".cm-formatting, .cm-formatting-list, .cm-formatting-header", "color: " .. u.muted},
+    {".cm-link, .cm-url", "color: " .. a.primary},
+    {".cm-hashtag, .cm-hmd-frontmatter", "color: " .. a.secondary},
   }
 
   local out = {
@@ -357,11 +444,23 @@ local function generate_obsidian(p)
   for _, v in ipairs(vars) do out[#out + 1] = "  " .. v .. ";" end
   out[#out + 1] = "}"
   out[#out + 1] = ""
-  out[#out + 1] = ".cm-cursor { border-left-color: " .. u.cursor .. "; }"
+  out[#out + 1] = "/* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */"
+  for _, t in ipairs(cm) do out[#out + 1] = t[1] .. " { " .. t[2] .. "; }" end
   out[#out + 1] = ""
-  for _, t in ipairs(tokens) do
-    out[#out + 1] = t[1] .. " { " .. t[2] .. "; }"
-  end
+  out[#out + 1] = ".cm-cursor, .cm-dropCursor { border-left-color: " .. u.cursor .. "; }"
+  out[#out + 1] = ".cm-selectionBackground, .cm-content ::selection { background: " .. u.selection .. "; }"
+  out[#out + 1] = ".cm-activeLine, .cm-activeLineGutter { background: " .. tint(u.surface, 45) .. "; }"
+  out[#out + 1] = ".markdown-rendered mark, .cm-highlight { background: " .. tint(a.secondary, 35) .. "; }"
+  out[#out + 1] = ".markdown-rendered blockquote { border-inline-start-color: " .. u.border .. "; }"
+  out[#out + 1] = ".markdown-rendered hr { border-color: " .. u.border .. "; }"
+  out[#out + 1] = ".markdown-rendered a.internal-link { color: " .. a.primary .. "; }"
+  out[#out + 1] = ".markdown-rendered a.external-link { color: " .. a.secondary .. "; }"
+  out[#out + 1] = ".markdown-rendered code, .cm-inline-code { background: " .. u.surface .. "; color: " .. u.foreground .. "; }"
+  out[#out + 1] = ".markdown-rendered pre, .markdown-rendered .callout { border-color: " .. u.border .. "; }"
+  out[#out + 1] = ".markdown-rendered .callout[data-callout=info] { --callout-color: " .. st.info .. "; }"
+  out[#out + 1] = ".markdown-rendered .callout[data-callout=warning] { --callout-color: " .. st.warning .. "; }"
+  out[#out + 1] = ".markdown-rendered .callout[data-callout=error] { --callout-color: " .. st.error .. "; }"
+  out[#out + 1] = ".markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: " .. st.success .. "; }"
   return table.concat(out, "\n") .. "\n"
 end
 
