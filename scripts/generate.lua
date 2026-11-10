@@ -234,10 +234,10 @@ local function generate_nvim(p)
   lines[#lines + 1] = 'hi("DiagnosticOk", { fg = c["status_success"] })'
 
   local ansi = {
-    "ui_surface", "status_error", "accent_primary", "accent_secondary",
-    "ui_border", "syntax_type", "status_info", "ui_foreground",
-    "ui_muted", "status_error", "syntax_number", "ui_cursor",
-    "syntax_operator", "syntax_function", "syntax_string", "ui_foreground",
+    "ui_surface", "status_error", "status_success", "status_warning",
+    "status_info", "accent_primary", "accent_secondary", "ui_foreground",
+    "ui_muted", "status_error", "diff_added", "status_warning",
+    "syntax_type", "syntax_function", "syntax_string", "ui_foreground",
   }
 
   lines[#lines + 1] = ""
@@ -254,13 +254,13 @@ local function generate_alacritty(p)
   local u, a, s, st = p.ui, p.accent, p.syntax, p.status
 
   local normal = {
-    u.surface, st.error, a.primary, a.secondary,
-    u.border, s.type, st.info, u.foreground,
+    u.surface, st.error, st.success, st.warning,
+    st.info, a.primary, a.secondary, u.foreground,
   }
 
   local bright = {
-    u.muted, st.error, s.number, u.cursor,
-    s.operator, s["function"], s.string, u.foreground,
+    u.muted, st.error, d.added, st.warning,
+    s.type, s["function"], s.string, u.foreground,
   }
 
   local keys = {"black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"}
