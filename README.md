@@ -1,6 +1,6 @@
 # findspot
 
-Six color schemes for Neovim, with matching exports for Alacritty and Obsidian.
+findspot is a set of six **Neovim colorschemes** (Vim themes), with matching palette exports for **Alacritty** and **Obsidian**.
 
 The screenshots below are **real Alacritty windows running Neovim**, captured in CI—not mock terminal renderings.
 
