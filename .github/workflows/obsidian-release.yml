@@ -38,7 +38,7 @@ jobs:
             echo "Tag $tag does not match manifest version $version" >&2
             exit 1
           fi
-          test -s theme.css
+          bash scripts/check-obsidian-theme.sh
           echo "version=$version" >> "$GITHUB_OUTPUT"
       - name: Create GitHub release with Obsidian assets
         env:
