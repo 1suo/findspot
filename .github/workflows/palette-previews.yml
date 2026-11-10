@@ -25,6 +25,11 @@ jobs:
           sudo apt-get install -y lua5.4 alacritty neovim xvfb imagemagick fonts-dejavu-core
       - name: Regenerate application ports
         run: lua scripts/generate.lua
+      - name: Validate all generated Neovim colorschemes
+        run: |
+          for name in alexandria babylon knossos petra tikal troy; do
+            nvim --headless --clean -u NONE --cmd "set runtimepath^=$PWD" -c "colorscheme findspot-$name" -c "qa"
+          done
       - name: Capture real Alacritty + Neovim sessions
         run: xvfb-run -a -s "-screen 0 1280x900x24" bash scripts/screenshots.sh
       - name: Commit generated ports and screenshots
