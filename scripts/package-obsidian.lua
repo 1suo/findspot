@@ -51,7 +51,7 @@ for _, p in ipairs(palettes) do
 
   local lines = {}
   local inside_vars = false
-  for line in replaced:gmatch("([^\n]*)\n?") do
+  for line in (replaced .. "\n"):gmatch("(.-)\n") do
     if line == "" and #lines == 0 then
       -- Preserve no leading blank lines.
     else
