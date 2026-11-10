@@ -404,10 +404,14 @@ local function generate_obsidian(p)
     "--code-purple: " .. s.constant,
     "--blockquote-border-color: " .. u.border,
     "--hr-color: " .. u.border,
-    "--tag-color: " .. a.primary,
-    "--tag-color-hover: " .. hover(a.primary),
-    "--tag-background: " .. tint(a.primary, 12),
-    "--tag-background-hover: " .. tint(a.primary, 20),
+    -- Tag pills use readable body text on a quiet accent wash. The old
+    -- near-solid accent fill paired with accent text was harsh and often
+    -- failed contrast, especially in dark palettes.
+    "--tag-color: " .. u.foreground,
+    "--tag-color-hover: " .. u.foreground,
+    "--tag-background: " .. tint(a.primary, 94),
+    "--tag-background-hover: " .. tint(a.primary, 90),
+    "--tag-border-color: " .. tint(a.primary, 80),
     "--checkbox-color: " .. a.primary,
     "--checkbox-color-hover: " .. hover(a.primary),
     "--checkbox-marker-color: " .. on_accent,
