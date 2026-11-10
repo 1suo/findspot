@@ -27,7 +27,7 @@ jobs:
         run: lua scripts/generate.lua
       - name: Package Obsidian community theme
         run: lua scripts/package-obsidian.lua
-      - name: Validate all generated Neovim colorschemes
+      - name: Validate packaged Obsidian theme\n        run: bash scripts/check-obsidian-theme.sh\n      - name: Validate all generated Neovim colorschemes
         run: |
           for name in alexandria babylon knossos petra tikal troy; do
             nvim --headless --clean -u NONE --cmd "set runtimepath^=$PWD" -c "colorscheme findspot-$name" -c "qa"
