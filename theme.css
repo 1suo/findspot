@@ -196,36 +196,36 @@ body.theme-light.findspot-palette-alexandria {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #708090; font-style: italic; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #228B22; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-number, .cm-editor .cm-atom { color: #008B8B; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #191970; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-keyword, .cm-editor .cm-control { color: #B8860B; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #4169E1; font-weight: bold; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #8B008B; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #800080; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #C71585; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #800080; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-comment, body.theme-light.findspot-palette-alexandria .cm-editor .cm-line .cm-comment { color: #708090; font-style: italic; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-string, body.theme-light.findspot-palette-alexandria .cm-editor .cm-string-2, body.theme-light.findspot-palette-alexandria .cm-editor .cm-quote { color: #228B22; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-number, body.theme-light.findspot-palette-alexandria .cm-editor .cm-atom { color: #008B8B; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-bool, body.theme-light.findspot-palette-alexandria .cm-editor .cm-qualifier, body.theme-light.findspot-palette-alexandria .cm-editor .cm-meta { color: #191970; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-keyword, body.theme-light.findspot-palette-alexandria .cm-editor .cm-control { color: #B8860B; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-def, body.theme-light.findspot-palette-alexandria .cm-editor .cm-function, body.theme-light.findspot-palette-alexandria .cm-editor .cm-variableName.cm-function { color: #4169E1; font-weight: bold; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-operator, body.theme-light.findspot-palette-alexandria .cm-editor .cm-punctuation { color: #8B008B; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-type, body.theme-light.findspot-palette-alexandria .cm-editor .cm-className, body.theme-light.findspot-palette-alexandria .cm-editor .cm-builtin { color: #800080; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-tagName, body.theme-light.findspot-palette-alexandria .cm-editor .cm-tag { color: #C71585; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-propertyName, body.theme-light.findspot-palette-alexandria .cm-editor .cm-attributeName { color: #800080; }
 body.theme-light.findspot-palette-alexandria .cm-editor .cm-variableName { color: #2F4F4F; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #8B0000; text-decoration: underline wavy; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #696969; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-link, .cm-editor .cm-url { color: #B22222; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #008080; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-invalidchar, body.theme-light.findspot-palette-alexandria .cm-editor .cm-error { color: #8B0000; text-decoration: underline wavy; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-formatting, body.theme-light.findspot-palette-alexandria .cm-editor .cm-formatting-list, body.theme-light.findspot-palette-alexandria .cm-editor .cm-formatting-header { color: #696969; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-link, body.theme-light.findspot-palette-alexandria .cm-editor .cm-url { color: #B22222; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-hashtag, body.theme-light.findspot-palette-alexandria .cm-editor .cm-hmd-frontmatter { color: #008080; }
 
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #8B0000; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #2F4F4F; }
-body.theme-light.findspot-palette-alexandria .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #FFFAFA 55%, #FFFAFA); }
-body.theme-light.findspot-palette-alexandria .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #008080 65%, #FFFAFA); }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-cursor, body.theme-light.findspot-palette-alexandria .cm-editor .cm-dropCursor { border-left-color: #8B0000; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-selectionBackground, body.theme-light.findspot-palette-alexandria .cm-editor .cm-content ::selection { background: #2F4F4F; }
+body.theme-light.findspot-palette-alexandria .cm-editor .cm-activeLine, body.theme-light.findspot-palette-alexandria .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #FFFAFA 55%, #FFFAFA); }
+body.theme-light.findspot-palette-alexandria .markdown-rendered mark, body.theme-light.findspot-palette-alexandria .cm-editor .cm-highlight { background: color-mix(in srgb, #008080 65%, #FFFAFA); }
 body.theme-light.findspot-palette-alexandria .markdown-rendered blockquote { border-inline-start-color: #708090; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered hr { border-color: #708090; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered a.internal-link { color: #B22222; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered a.external-link { color: #008080; }
-body.theme-light.findspot-palette-alexandria .markdown-rendered code, .cm-editor .cm-inline-code { background: #FFFAFA; color: #2F4F4F; }
-body.theme-light.findspot-palette-alexandria .markdown-rendered pre, .markdown-rendered .callout { border-color: #708090; }
+body.theme-light.findspot-palette-alexandria .markdown-rendered code, body.theme-light.findspot-palette-alexandria .cm-editor .cm-inline-code { background: #FFFAFA; color: #2F4F4F; }
+body.theme-light.findspot-palette-alexandria .markdown-rendered pre, body.theme-light.findspot-palette-alexandria .markdown-rendered .callout { border-color: #708090; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=info] { --callout-color: #008080; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=warning] { --callout-color: #DAA520; }
 body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=error] { --callout-color: #8B0000; }
-body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #228B22; }
+body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=success], body.theme-light.findspot-palette-alexandria .markdown-rendered .callout[data-callout=tip] { --callout-color: #228B22; }
 
 
 /* Generated by scripts/generate.lua. Do not edit.
@@ -388,36 +388,36 @@ body.theme-dark.findspot-palette-babylon {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #6A5ACD; font-style: italic; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #faebd7; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-number, .cm-editor .cm-atom { color: #faebd7; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #b8860b; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-keyword, .cm-editor .cm-control { color: #ffd700; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #00ffff; font-weight: bold; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #cdc0b0; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #1e90ff; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #ff6a6a; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #1e90ff; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-comment, body.theme-dark.findspot-palette-babylon .cm-editor .cm-line .cm-comment { color: #6A5ACD; font-style: italic; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-string, body.theme-dark.findspot-palette-babylon .cm-editor .cm-string-2, body.theme-dark.findspot-palette-babylon .cm-editor .cm-quote { color: #faebd7; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-number, body.theme-dark.findspot-palette-babylon .cm-editor .cm-atom { color: #faebd7; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-bool, body.theme-dark.findspot-palette-babylon .cm-editor .cm-qualifier, body.theme-dark.findspot-palette-babylon .cm-editor .cm-meta { color: #b8860b; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-keyword, body.theme-dark.findspot-palette-babylon .cm-editor .cm-control { color: #ffd700; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-def, body.theme-dark.findspot-palette-babylon .cm-editor .cm-function, body.theme-dark.findspot-palette-babylon .cm-editor .cm-variableName.cm-function { color: #00ffff; font-weight: bold; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-operator, body.theme-dark.findspot-palette-babylon .cm-editor .cm-punctuation { color: #cdc0b0; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-type, body.theme-dark.findspot-palette-babylon .cm-editor .cm-className, body.theme-dark.findspot-palette-babylon .cm-editor .cm-builtin { color: #1e90ff; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-tagName, body.theme-dark.findspot-palette-babylon .cm-editor .cm-tag { color: #ff6a6a; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-propertyName, body.theme-dark.findspot-palette-babylon .cm-editor .cm-attributeName { color: #1e90ff; }
 body.theme-dark.findspot-palette-babylon .cm-editor .cm-variableName { color: #FFF8DC; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #ff4040; text-decoration: underline wavy; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #6A5ACD; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-link, .cm-editor .cm-url { color: #faebd7; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #00ffff; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-invalidchar, body.theme-dark.findspot-palette-babylon .cm-editor .cm-error { color: #ff4040; text-decoration: underline wavy; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-formatting, body.theme-dark.findspot-palette-babylon .cm-editor .cm-formatting-list, body.theme-dark.findspot-palette-babylon .cm-editor .cm-formatting-header { color: #6A5ACD; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-link, body.theme-dark.findspot-palette-babylon .cm-editor .cm-url { color: #faebd7; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-hashtag, body.theme-dark.findspot-palette-babylon .cm-editor .cm-hmd-frontmatter { color: #00ffff; }
 
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #6a5acd; }
-body.theme-dark.findspot-palette-babylon .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #0f0f0f 55%, #191970); }
-body.theme-dark.findspot-palette-babylon .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #00ffff 65%, #191970); }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-cursor, body.theme-dark.findspot-palette-babylon .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-selectionBackground, body.theme-dark.findspot-palette-babylon .cm-editor .cm-content ::selection { background: #6a5acd; }
+body.theme-dark.findspot-palette-babylon .cm-editor .cm-activeLine, body.theme-dark.findspot-palette-babylon .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #0f0f0f 55%, #191970); }
+body.theme-dark.findspot-palette-babylon .markdown-rendered mark, body.theme-dark.findspot-palette-babylon .cm-editor .cm-highlight { background: color-mix(in srgb, #00ffff 65%, #191970); }
 body.theme-dark.findspot-palette-babylon .markdown-rendered blockquote { border-inline-start-color: #6A5ACD; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered hr { border-color: #6A5ACD; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered a.internal-link { color: #faebd7; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered a.external-link { color: #00ffff; }
-body.theme-dark.findspot-palette-babylon .markdown-rendered code, .cm-editor .cm-inline-code { background: #0f0f0f; color: #FFF8DC; }
-body.theme-dark.findspot-palette-babylon .markdown-rendered pre, .markdown-rendered .callout { border-color: #6A5ACD; }
+body.theme-dark.findspot-palette-babylon .markdown-rendered code, body.theme-dark.findspot-palette-babylon .cm-editor .cm-inline-code { background: #0f0f0f; color: #FFF8DC; }
+body.theme-dark.findspot-palette-babylon .markdown-rendered pre, body.theme-dark.findspot-palette-babylon .markdown-rendered .callout { border-color: #6A5ACD; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=info] { --callout-color: #1E90FF; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=warning] { --callout-color: #FFFF00; }
 body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=error] { --callout-color: #ff4040; }
-body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #00FFFF; }
+body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=success], body.theme-dark.findspot-palette-babylon .markdown-rendered .callout[data-callout=tip] { --callout-color: #00FFFF; }
 
 
 /* Generated by scripts/generate.lua. Do not edit.
@@ -580,36 +580,36 @@ body.theme-light.findspot-palette-knossos {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-light.findspot-palette-knossos .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #cdaa7d; font-style: italic; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #CD853F; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-number, .cm-editor .cm-atom { color: #E34234; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #C71585; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-keyword, .cm-editor .cm-control { color: #800080; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #FF6347; font-weight: bold; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #8B4513; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #DAA520; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #B8860B; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #DAA520; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-comment, body.theme-light.findspot-palette-knossos .cm-editor .cm-line .cm-comment { color: #cdaa7d; font-style: italic; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-string, body.theme-light.findspot-palette-knossos .cm-editor .cm-string-2, body.theme-light.findspot-palette-knossos .cm-editor .cm-quote { color: #CD853F; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-number, body.theme-light.findspot-palette-knossos .cm-editor .cm-atom { color: #E34234; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-bool, body.theme-light.findspot-palette-knossos .cm-editor .cm-qualifier, body.theme-light.findspot-palette-knossos .cm-editor .cm-meta { color: #C71585; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-keyword, body.theme-light.findspot-palette-knossos .cm-editor .cm-control { color: #800080; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-def, body.theme-light.findspot-palette-knossos .cm-editor .cm-function, body.theme-light.findspot-palette-knossos .cm-editor .cm-variableName.cm-function { color: #FF6347; font-weight: bold; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-operator, body.theme-light.findspot-palette-knossos .cm-editor .cm-punctuation { color: #8B4513; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-type, body.theme-light.findspot-palette-knossos .cm-editor .cm-className, body.theme-light.findspot-palette-knossos .cm-editor .cm-builtin { color: #DAA520; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-tagName, body.theme-light.findspot-palette-knossos .cm-editor .cm-tag { color: #B8860B; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-propertyName, body.theme-light.findspot-palette-knossos .cm-editor .cm-attributeName { color: #DAA520; }
 body.theme-light.findspot-palette-knossos .cm-editor .cm-variableName { color: #8b2323; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #E34234; text-decoration: underline wavy; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #cdb79e; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-link, .cm-editor .cm-url { color: #FF6347; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #1a1a1a; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-invalidchar, body.theme-light.findspot-palette-knossos .cm-editor .cm-error { color: #E34234; text-decoration: underline wavy; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-formatting, body.theme-light.findspot-palette-knossos .cm-editor .cm-formatting-list, body.theme-light.findspot-palette-knossos .cm-editor .cm-formatting-header { color: #cdb79e; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-link, body.theme-light.findspot-palette-knossos .cm-editor .cm-url { color: #FF6347; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-hashtag, body.theme-light.findspot-palette-knossos .cm-editor .cm-hmd-frontmatter { color: #1a1a1a; }
 
-body.theme-light.findspot-palette-knossos .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #FF0000; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #ff7f50; }
-body.theme-light.findspot-palette-knossos .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #eedfcc 55%, #FAEBD7); }
-body.theme-light.findspot-palette-knossos .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #1a1a1a 65%, #FAEBD7); }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-cursor, body.theme-light.findspot-palette-knossos .cm-editor .cm-dropCursor { border-left-color: #FF0000; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-selectionBackground, body.theme-light.findspot-palette-knossos .cm-editor .cm-content ::selection { background: #ff7f50; }
+body.theme-light.findspot-palette-knossos .cm-editor .cm-activeLine, body.theme-light.findspot-palette-knossos .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #eedfcc 55%, #FAEBD7); }
+body.theme-light.findspot-palette-knossos .markdown-rendered mark, body.theme-light.findspot-palette-knossos .cm-editor .cm-highlight { background: color-mix(in srgb, #1a1a1a 65%, #FAEBD7); }
 body.theme-light.findspot-palette-knossos .markdown-rendered blockquote { border-inline-start-color: #8b7355; }
 body.theme-light.findspot-palette-knossos .markdown-rendered hr { border-color: #8b7355; }
 body.theme-light.findspot-palette-knossos .markdown-rendered a.internal-link { color: #FF6347; }
 body.theme-light.findspot-palette-knossos .markdown-rendered a.external-link { color: #1a1a1a; }
-body.theme-light.findspot-palette-knossos .markdown-rendered code, .cm-editor .cm-inline-code { background: #eedfcc; color: #8b2323; }
-body.theme-light.findspot-palette-knossos .markdown-rendered pre, .markdown-rendered .callout { border-color: #8b7355; }
+body.theme-light.findspot-palette-knossos .markdown-rendered code, body.theme-light.findspot-palette-knossos .cm-editor .cm-inline-code { background: #eedfcc; color: #8b2323; }
+body.theme-light.findspot-palette-knossos .markdown-rendered pre, body.theme-light.findspot-palette-knossos .markdown-rendered .callout { border-color: #8b7355; }
 body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=info] { --callout-color: #800080; }
 body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=warning] { --callout-color: #DAA520; }
 body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=error] { --callout-color: #E34234; }
-body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #FF6347; }
+body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=success], body.theme-light.findspot-palette-knossos .markdown-rendered .callout[data-callout=tip] { --callout-color: #FF6347; }
 
 
 /* Generated by scripts/generate.lua. Do not edit.
@@ -772,36 +772,36 @@ body.theme-dark.findspot-palette-petra {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-dark.findspot-palette-petra .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #BC8F8F; font-style: italic; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #ffe4e1; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-number, .cm-editor .cm-atom { color: #ffe4e1; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #f08080; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-keyword, .cm-editor .cm-control { color: #FFD700; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #F4A460; font-weight: bold; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #cd853f; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #DDA0DD; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #FF7F50; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #DDA0DD; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-comment, body.theme-dark.findspot-palette-petra .cm-editor .cm-line .cm-comment { color: #BC8F8F; font-style: italic; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-string, body.theme-dark.findspot-palette-petra .cm-editor .cm-string-2, body.theme-dark.findspot-palette-petra .cm-editor .cm-quote { color: #ffe4e1; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-number, body.theme-dark.findspot-palette-petra .cm-editor .cm-atom { color: #ffe4e1; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-bool, body.theme-dark.findspot-palette-petra .cm-editor .cm-qualifier, body.theme-dark.findspot-palette-petra .cm-editor .cm-meta { color: #f08080; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-keyword, body.theme-dark.findspot-palette-petra .cm-editor .cm-control { color: #FFD700; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-def, body.theme-dark.findspot-palette-petra .cm-editor .cm-function, body.theme-dark.findspot-palette-petra .cm-editor .cm-variableName.cm-function { color: #F4A460; font-weight: bold; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-operator, body.theme-dark.findspot-palette-petra .cm-editor .cm-punctuation { color: #cd853f; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-type, body.theme-dark.findspot-palette-petra .cm-editor .cm-className, body.theme-dark.findspot-palette-petra .cm-editor .cm-builtin { color: #DDA0DD; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-tagName, body.theme-dark.findspot-palette-petra .cm-editor .cm-tag { color: #FF7F50; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-propertyName, body.theme-dark.findspot-palette-petra .cm-editor .cm-attributeName { color: #DDA0DD; }
 body.theme-dark.findspot-palette-petra .cm-editor .cm-variableName { color: #FFE4E1; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #FF6347; text-decoration: underline wavy; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #BC8F8F; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-link, .cm-editor .cm-url { color: #ff6347; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #cdb7b5; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-invalidchar, body.theme-dark.findspot-palette-petra .cm-editor .cm-error { color: #FF6347; text-decoration: underline wavy; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-formatting, body.theme-dark.findspot-palette-petra .cm-editor .cm-formatting-list, body.theme-dark.findspot-palette-petra .cm-editor .cm-formatting-header { color: #BC8F8F; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-link, body.theme-dark.findspot-palette-petra .cm-editor .cm-url { color: #ff6347; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-hashtag, body.theme-dark.findspot-palette-petra .cm-editor .cm-hmd-frontmatter { color: #cdb7b5; }
 
-body.theme-dark.findspot-palette-petra .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #cd2626; }
-body.theme-dark.findspot-palette-petra .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #0d0d0d 55%, #8b0000); }
-body.theme-dark.findspot-palette-petra .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #cdb7b5 65%, #8b0000); }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-cursor, body.theme-dark.findspot-palette-petra .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-selectionBackground, body.theme-dark.findspot-palette-petra .cm-editor .cm-content ::selection { background: #cd2626; }
+body.theme-dark.findspot-palette-petra .cm-editor .cm-activeLine, body.theme-dark.findspot-palette-petra .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #0d0d0d 55%, #8b0000); }
+body.theme-dark.findspot-palette-petra .markdown-rendered mark, body.theme-dark.findspot-palette-petra .cm-editor .cm-highlight { background: color-mix(in srgb, #cdb7b5 65%, #8b0000); }
 body.theme-dark.findspot-palette-petra .markdown-rendered blockquote { border-inline-start-color: #8B4513; }
 body.theme-dark.findspot-palette-petra .markdown-rendered hr { border-color: #8B4513; }
 body.theme-dark.findspot-palette-petra .markdown-rendered a.internal-link { color: #ff6347; }
 body.theme-dark.findspot-palette-petra .markdown-rendered a.external-link { color: #cdb7b5; }
-body.theme-dark.findspot-palette-petra .markdown-rendered code, .cm-editor .cm-inline-code { background: #0d0d0d; color: #FFE4E1; }
-body.theme-dark.findspot-palette-petra .markdown-rendered pre, .markdown-rendered .callout { border-color: #8B4513; }
+body.theme-dark.findspot-palette-petra .markdown-rendered code, body.theme-dark.findspot-palette-petra .cm-editor .cm-inline-code { background: #0d0d0d; color: #FFE4E1; }
+body.theme-dark.findspot-palette-petra .markdown-rendered pre, body.theme-dark.findspot-palette-petra .markdown-rendered .callout { border-color: #8B4513; }
 body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=info] { --callout-color: #F08080; }
 body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=warning] { --callout-color: #FFD700; }
 body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=error] { --callout-color: #FF6347; }
-body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #DEB887; }
+body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=success], body.theme-dark.findspot-palette-petra .markdown-rendered .callout[data-callout=tip] { --callout-color: #DEB887; }
 
 
 /* Generated by scripts/generate.lua. Do not edit.
@@ -964,36 +964,36 @@ body.theme-dark.findspot-palette-tikal {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #228b22; font-style: italic; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #F0E68C; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-number, .cm-editor .cm-atom { color: #f0e68c; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #bdb76b; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-keyword, .cm-editor .cm-control { color: #FFD700; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #7CFC00; font-weight: bold; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #cd853f; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #ff6347; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #FF8C00; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #ff6347; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-comment, body.theme-dark.findspot-palette-tikal .cm-editor .cm-line .cm-comment { color: #228b22; font-style: italic; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-string, body.theme-dark.findspot-palette-tikal .cm-editor .cm-string-2, body.theme-dark.findspot-palette-tikal .cm-editor .cm-quote { color: #F0E68C; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-number, body.theme-dark.findspot-palette-tikal .cm-editor .cm-atom { color: #f0e68c; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-bool, body.theme-dark.findspot-palette-tikal .cm-editor .cm-qualifier, body.theme-dark.findspot-palette-tikal .cm-editor .cm-meta { color: #bdb76b; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-keyword, body.theme-dark.findspot-palette-tikal .cm-editor .cm-control { color: #FFD700; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-def, body.theme-dark.findspot-palette-tikal .cm-editor .cm-function, body.theme-dark.findspot-palette-tikal .cm-editor .cm-variableName.cm-function { color: #7CFC00; font-weight: bold; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-operator, body.theme-dark.findspot-palette-tikal .cm-editor .cm-punctuation { color: #cd853f; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-type, body.theme-dark.findspot-palette-tikal .cm-editor .cm-className, body.theme-dark.findspot-palette-tikal .cm-editor .cm-builtin { color: #ff6347; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-tagName, body.theme-dark.findspot-palette-tikal .cm-editor .cm-tag { color: #FF8C00; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-propertyName, body.theme-dark.findspot-palette-tikal .cm-editor .cm-attributeName { color: #ff6347; }
 body.theme-dark.findspot-palette-tikal .cm-editor .cm-variableName { color: #F5DEB3; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #ff3030; text-decoration: underline wavy; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #2f4f4f; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-link, .cm-editor .cm-url { color: #7CFC00; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #DAA520; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-invalidchar, body.theme-dark.findspot-palette-tikal .cm-editor .cm-error { color: #ff3030; text-decoration: underline wavy; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-formatting, body.theme-dark.findspot-palette-tikal .cm-editor .cm-formatting-list, body.theme-dark.findspot-palette-tikal .cm-editor .cm-formatting-header { color: #2f4f4f; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-link, body.theme-dark.findspot-palette-tikal .cm-editor .cm-url { color: #7CFC00; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-hashtag, body.theme-dark.findspot-palette-tikal .cm-editor .cm-hmd-frontmatter { color: #DAA520; }
 
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #458b74; }
-body.theme-dark.findspot-palette-tikal .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #080808 55%, #013220); }
-body.theme-dark.findspot-palette-tikal .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #DAA520 65%, #013220); }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-cursor, body.theme-dark.findspot-palette-tikal .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-selectionBackground, body.theme-dark.findspot-palette-tikal .cm-editor .cm-content ::selection { background: #458b74; }
+body.theme-dark.findspot-palette-tikal .cm-editor .cm-activeLine, body.theme-dark.findspot-palette-tikal .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #080808 55%, #013220); }
+body.theme-dark.findspot-palette-tikal .markdown-rendered mark, body.theme-dark.findspot-palette-tikal .cm-editor .cm-highlight { background: color-mix(in srgb, #DAA520 65%, #013220); }
 body.theme-dark.findspot-palette-tikal .markdown-rendered blockquote { border-inline-start-color: #2f4f4f; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered hr { border-color: #2f4f4f; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered a.internal-link { color: #7CFC00; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered a.external-link { color: #DAA520; }
-body.theme-dark.findspot-palette-tikal .markdown-rendered code, .cm-editor .cm-inline-code { background: #080808; color: #F5DEB3; }
-body.theme-dark.findspot-palette-tikal .markdown-rendered pre, .markdown-rendered .callout { border-color: #2f4f4f; }
+body.theme-dark.findspot-palette-tikal .markdown-rendered code, body.theme-dark.findspot-palette-tikal .cm-editor .cm-inline-code { background: #080808; color: #F5DEB3; }
+body.theme-dark.findspot-palette-tikal .markdown-rendered pre, body.theme-dark.findspot-palette-tikal .markdown-rendered .callout { border-color: #2f4f4f; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=info] { --callout-color: #BDB76B; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=warning] { --callout-color: #FFD700; }
 body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=error] { --callout-color: #ff3030; }
-body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #7CFC00; }
+body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=success], body.theme-dark.findspot-palette-tikal .markdown-rendered .callout[data-callout=tip] { --callout-color: #7CFC00; }
 
 
 /* Generated by scripts/generate.lua. Do not edit.
@@ -1156,34 +1156,34 @@ body.theme-dark.findspot-palette-troy {
 }
 
 /* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
-body.theme-dark.findspot-palette-troy .cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #8b4513; font-style: italic; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #cdc0b0; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-number, .cm-editor .cm-atom { color: #cdc0b0; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #bdb76b; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-keyword, .cm-editor .cm-control { color: #ff6347; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #ffd700; font-weight: bold; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #8b8378; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #cd853f; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-tagName, .cm-editor .cm-tag { color: #8b8378; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #cd853f; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-comment, body.theme-dark.findspot-palette-troy .cm-editor .cm-line .cm-comment { color: #8b4513; font-style: italic; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-string, body.theme-dark.findspot-palette-troy .cm-editor .cm-string-2, body.theme-dark.findspot-palette-troy .cm-editor .cm-quote { color: #cdc0b0; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-number, body.theme-dark.findspot-palette-troy .cm-editor .cm-atom { color: #cdc0b0; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-bool, body.theme-dark.findspot-palette-troy .cm-editor .cm-qualifier, body.theme-dark.findspot-palette-troy .cm-editor .cm-meta { color: #bdb76b; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-keyword, body.theme-dark.findspot-palette-troy .cm-editor .cm-control { color: #ff6347; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-def, body.theme-dark.findspot-palette-troy .cm-editor .cm-function, body.theme-dark.findspot-palette-troy .cm-editor .cm-variableName.cm-function { color: #ffd700; font-weight: bold; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-operator, body.theme-dark.findspot-palette-troy .cm-editor .cm-punctuation { color: #8b8378; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-type, body.theme-dark.findspot-palette-troy .cm-editor .cm-className, body.theme-dark.findspot-palette-troy .cm-editor .cm-builtin { color: #cd853f; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-tagName, body.theme-dark.findspot-palette-troy .cm-editor .cm-tag { color: #8b8378; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-propertyName, body.theme-dark.findspot-palette-troy .cm-editor .cm-attributeName { color: #cd853f; }
 body.theme-dark.findspot-palette-troy .cm-editor .cm-variableName { color: #faebd7; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #FF0000; text-decoration: underline wavy; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #8b4513; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-link, .cm-editor .cm-url { color: #FF6347; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #FFD700; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-invalidchar, body.theme-dark.findspot-palette-troy .cm-editor .cm-error { color: #FF0000; text-decoration: underline wavy; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-formatting, body.theme-dark.findspot-palette-troy .cm-editor .cm-formatting-list, body.theme-dark.findspot-palette-troy .cm-editor .cm-formatting-header { color: #8b4513; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-link, body.theme-dark.findspot-palette-troy .cm-editor .cm-url { color: #FF6347; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-hashtag, body.theme-dark.findspot-palette-troy .cm-editor .cm-hmd-frontmatter { color: #FFD700; }
 
-body.theme-dark.findspot-palette-troy .cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #00FF7F; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #8b4513; }
-body.theme-dark.findspot-palette-troy .cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #201006 55%, #000000); }
-body.theme-dark.findspot-palette-troy .markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #FFD700 65%, #000000); }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-cursor, body.theme-dark.findspot-palette-troy .cm-editor .cm-dropCursor { border-left-color: #00FF7F; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-selectionBackground, body.theme-dark.findspot-palette-troy .cm-editor .cm-content ::selection { background: #8b4513; }
+body.theme-dark.findspot-palette-troy .cm-editor .cm-activeLine, body.theme-dark.findspot-palette-troy .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #201006 55%, #000000); }
+body.theme-dark.findspot-palette-troy .markdown-rendered mark, body.theme-dark.findspot-palette-troy .cm-editor .cm-highlight { background: color-mix(in srgb, #FFD700 65%, #000000); }
 body.theme-dark.findspot-palette-troy .markdown-rendered blockquote { border-inline-start-color: #333333; }
 body.theme-dark.findspot-palette-troy .markdown-rendered hr { border-color: #333333; }
 body.theme-dark.findspot-palette-troy .markdown-rendered a.internal-link { color: #FF6347; }
 body.theme-dark.findspot-palette-troy .markdown-rendered a.external-link { color: #FFD700; }
-body.theme-dark.findspot-palette-troy .markdown-rendered code, .cm-editor .cm-inline-code { background: #201006; color: #faebd7; }
-body.theme-dark.findspot-palette-troy .markdown-rendered pre, .markdown-rendered .callout { border-color: #333333; }
+body.theme-dark.findspot-palette-troy .markdown-rendered code, body.theme-dark.findspot-palette-troy .cm-editor .cm-inline-code { background: #201006; color: #faebd7; }
+body.theme-dark.findspot-palette-troy .markdown-rendered pre, body.theme-dark.findspot-palette-troy .markdown-rendered .callout { border-color: #333333; }
 body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=info] { --callout-color: #BDB76B; }
 body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=warning] { --callout-color: #FFD700; }
 body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=error] { --callout-color: #FF0000; }
-body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #00fa9a; }
+body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=success], body.theme-dark.findspot-palette-troy .markdown-rendered .callout[data-callout=tip] { --callout-color: #00fa9a; }
 
