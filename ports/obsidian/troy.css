@@ -29,7 +29,7 @@ body.theme-dark {
   --background-modifier-success: color-mix(in srgb, #00fa9a 18%, #000000);
   --background-modifier-error: color-mix(in srgb, #FF0000 18%, #000000);
   --background-modifier-error-hover: color-mix(in srgb, #FF0000 28%, #000000);
-  --background-modifier-cover: color-mix(in srgb, #000000 82%, #000000);
+  --background-modifier-cover: color-mix(in srgb, #000000 82%, #ffffff);
   --text-normal: #faebd7;
   --text-muted: #8b4513;
   --text-faint: #333333;

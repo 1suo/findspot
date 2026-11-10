@@ -29,11 +29,11 @@ body.theme-light {
   --background-modifier-success: color-mix(in srgb, #FF6347 18%, #FAEBD7);
   --background-modifier-error: color-mix(in srgb, #E34234 18%, #FAEBD7);
   --background-modifier-error-hover: color-mix(in srgb, #E34234 28%, #FAEBD7);
-  --background-modifier-cover: color-mix(in srgb, #FAEBD7 82%, #FAEBD7);
+  --background-modifier-cover: color-mix(in srgb, #FAEBD7 82%, #000000);
   --text-normal: #8b2323;
   --text-muted: #cdb79e;
   --text-faint: #8b7355;
-  --text-on-accent: #FAEBD7;
+  --text-on-accent: #8b2323;
   --text-on-accent-inverted: #8b2323;
   --text-selection: #ff7f50;
   --text-highlight-bg: color-mix(in srgb, #1a1a1a 65%, #FAEBD7);
@@ -104,7 +104,7 @@ body.theme-light {
   --tag-background-hover: color-mix(in srgb, #FF6347 80%, #FAEBD7);
   --checkbox-color: #FF6347;
   --checkbox-color-hover: color-mix(in srgb, #FF6347 90%, #000000);
-  --checkbox-marker-color: #FAEBD7;
+  --checkbox-marker-color: #8b2323;
   --checklist-done-color: #cdb79e;
   --list-marker-color: #cdb79e;
   --titlebar-background: #eedfcc;
