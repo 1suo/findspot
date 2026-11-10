@@ -61,3 +61,7 @@ This regenerates the Neovim colorschemes, Alacritty palettes, Obsidian snippets,
 - [Open the palette composer](tools/composer.html)
 - [Report a problem or request a port](https://github.com/1suo/findspot/issues)
 
+## License
+
+findspot is released under the [MIT License](LICENSE).
+
