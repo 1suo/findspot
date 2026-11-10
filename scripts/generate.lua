@@ -251,7 +251,7 @@ local function generate_nvim(p)
 end
 
 local function generate_alacritty(p)
-  local u, a, s, st = p.ui, p.accent, p.syntax, p.status
+  local u, a, s, st, d = p.ui, p.accent, p.syntax, p.status, p.diff
 
   local normal = {
     u.surface, st.error, st.success, st.warning,
