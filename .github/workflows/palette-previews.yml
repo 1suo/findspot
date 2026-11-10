@@ -2,6 +2,8 @@ name: Generate ports and screenshots
 
 on:
   push:
+    branches:
+      - "**"
   workflow_dispatch:
 
 permissions:
@@ -25,7 +27,9 @@ jobs:
           sudo apt-get install -y lua5.4 alacritty neovim xvfb imagemagick fonts-dejavu-core xdotool
       - name: Regenerate application ports
         run: lua scripts/generate.lua
-      - name: Validate all generated Neovim colorschemes
+      - name: Package Obsidian community theme
+        run: lua scripts/package-obsidian.lua
+      - name: Validate packaged Obsidian theme\n        run: bash scripts/check-obsidian-theme.sh\n      - name: Validate all generated Neovim colorschemes
         run: |
           for name in alexandria babylon knossos petra tikal troy; do
             nvim --headless --clean -u NONE --cmd "set runtimepath^=$PWD" -c "colorscheme findspot-$name" -c "qa"
@@ -34,7 +38,7 @@ jobs:
         run: xvfb-run -a -s "-screen 0 1280x900x24" bash scripts/screenshots.sh
       - name: Commit generated ports and screenshots
         run: |
-          git add colors ports tools/composer.html screenshots
+          git add colors ports tools/composer.html screenshots theme.css
           if git diff --cached --quiet; then
             echo "Generated files are already up to date."
             exit 0
