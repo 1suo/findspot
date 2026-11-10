@@ -19,13 +19,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - uses: leafo/gh-actions-lua@v10
-        with:
-          luaVersion: "5.4"
       - name: Install screenshot dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y alacritty neovim xvfb imagemagick fonts-dejavu-core
+          sudo apt-get install -y lua5.4 alacritty neovim xvfb imagemagick fonts-dejavu-core
       - name: Regenerate application ports
         run: lua scripts/generate.lua
       - name: Capture real Alacritty + Neovim sessions
