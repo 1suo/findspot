@@ -302,6 +302,17 @@ local function generate_obsidian(p)
   local accent_h, accent_s, accent_l = hsl(a.primary)
   local hover = function(c) return mix(c, 10, target) end
   local tint = function(c, pct) return mix(c, pct, u.background) end
+  local base_steps = {
+    {"00", 0}, {"05", 5}, {"10", 10}, {"20", 20}, {"25", 25},
+    {"30", 30}, {"35", 35}, {"40", 40}, {"50", 50}, {"60", 60},
+    {"70", 70}, {"100", 100},
+  }
+  local base_vars = {}
+  for _, step in ipairs(base_steps) do
+    base_vars[#base_vars + 1] = "--color-base-" .. step[1] .. ": "
+      .. mix(u.background, step[2], u.foreground)
+  end
+
   local vars = {
     "--background-primary: " .. u.background,
     "--background-primary-alt: " .. u.surface,
@@ -339,6 +350,17 @@ local function generate_obsidian(p)
     "--interactive-success: " .. st.success,
     "--interactive-warning: " .. st.warning,
     "--interactive-error: " .. st.error,
+    "--color-accent: " .. a.primary,
+    "--color-accent-1: " .. hover(a.primary),
+    "--color-accent-2: " .. mix(a.primary, 20, target),
+    "--color-red: " .. st.error,
+    "--color-orange: " .. st.warning,
+    "--color-yellow: " .. st.warning,
+    "--color-green: " .. st.success,
+    "--color-cyan: " .. st.info,
+    "--color-blue: " .. s.type,
+    "--color-purple: " .. s.constant,
+    "--color-pink: " .. s.special,
     "--accent-h: " .. tostring(math.floor(accent_h + 0.5)),
     "--accent-s: " .. tostring(math.floor(accent_s * 100 + 0.5)) .. "%",
     "--accent-l: " .. tostring(math.floor(accent_l * 100 + 0.5)) .. "%",
@@ -463,17 +485,23 @@ local function generate_obsidian(p)
   out[#out + 1] = "}"
   out[#out + 1] = ""
   out[#out + 1] = "/* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */"
-  for _, t in ipairs(cm) do out[#out + 1] = t[1] .. " { " .. t[2] .. "; }" end
+  for _, t in ipairs(cm) do
+    local selectors = {}
+    for selector in t[1]:gmatch("[^,]+") do
+      selectors[#selectors + 1] = ".cm-editor " .. selector:gsub("^%s+", "")
+    end
+    out[#out + 1] = table.concat(selectors, ", ") .. " { " .. t[2] .. "; }"
+  end
   out[#out + 1] = ""
-  out[#out + 1] = ".cm-cursor, .cm-dropCursor { border-left-color: " .. u.cursor .. "; }"
-  out[#out + 1] = ".cm-selectionBackground, .cm-content ::selection { background: " .. u.selection .. "; }"
-  out[#out + 1] = ".cm-activeLine, .cm-activeLineGutter { background: " .. tint(u.surface, 45) .. "; }"
-  out[#out + 1] = ".markdown-rendered mark, .cm-highlight { background: " .. tint(a.secondary, 35) .. "; }"
+  out[#out + 1] = ".cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: " .. u.cursor .. "; }"
+  out[#out + 1] = ".cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: " .. u.selection .. "; }"
+  out[#out + 1] = ".cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: " .. tint(u.surface, 45) .. "; }"
+  out[#out + 1] = ".markdown-rendered mark, .cm-editor .cm-highlight { background: " .. tint(a.secondary, 35) .. "; }"
   out[#out + 1] = ".markdown-rendered blockquote { border-inline-start-color: " .. u.border .. "; }"
   out[#out + 1] = ".markdown-rendered hr { border-color: " .. u.border .. "; }"
   out[#out + 1] = ".markdown-rendered a.internal-link { color: " .. a.primary .. "; }"
   out[#out + 1] = ".markdown-rendered a.external-link { color: " .. a.secondary .. "; }"
-  out[#out + 1] = ".markdown-rendered code, .cm-inline-code { background: " .. u.surface .. "; color: " .. u.foreground .. "; }"
+  out[#out + 1] = ".markdown-rendered code, .cm-editor .cm-inline-code { background: " .. u.surface .. "; color: " .. u.foreground .. "; }"
   out[#out + 1] = ".markdown-rendered pre, .markdown-rendered .callout { border-color: " .. u.border .. "; }"
   out[#out + 1] = ".markdown-rendered .callout[data-callout=info] { --callout-color: " .. st.info .. "; }"
   out[#out + 1] = ".markdown-rendered .callout[data-callout=warning] { --callout-color: " .. st.warning .. "; }"
