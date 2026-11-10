@@ -3,28 +3,75 @@
  * Settings -> Appearance -> CSS snippets.
  * Set Appearance -> Base color scheme: Dark. */
 
-body {
+body.theme-dark {
+  --color-base-00: color-mix(in srgb, #8b0000 100%, #FFE4E1);
+  --color-base-05: color-mix(in srgb, #8b0000 95%, #FFE4E1);
+  --color-base-10: color-mix(in srgb, #8b0000 90%, #FFE4E1);
+  --color-base-20: color-mix(in srgb, #8b0000 80%, #FFE4E1);
+  --color-base-25: color-mix(in srgb, #8b0000 75%, #FFE4E1);
+  --color-base-30: color-mix(in srgb, #8b0000 70%, #FFE4E1);
+  --color-base-35: color-mix(in srgb, #8b0000 65%, #FFE4E1);
+  --color-base-40: color-mix(in srgb, #8b0000 60%, #FFE4E1);
+  --color-base-50: color-mix(in srgb, #8b0000 50%, #FFE4E1);
+  --color-base-60: color-mix(in srgb, #8b0000 40%, #FFE4E1);
+  --color-base-70: color-mix(in srgb, #8b0000 30%, #FFE4E1);
+  --color-base-100: color-mix(in srgb, #8b0000 0%, #FFE4E1);
   --background-primary: #8b0000;
+  --background-primary-alt: #0d0d0d;
   --background-secondary: #0d0d0d;
+  --background-secondary-alt: color-mix(in srgb, #0d0d0d 8%, #8b0000);
   --background-modifier-border: #8B4513;
-  --background-modifier-hover: color-mix(in srgb, #FFE4E1 94%, transparent);
+  --background-modifier-border-hover: color-mix(in srgb, #8B4513 90%, #ffffff);
+  --background-modifier-border-focus: #ff6347;
+  --background-modifier-hover: color-mix(in srgb, #FFE4E1 6%, #8b0000);
+  --background-modifier-active-hover: color-mix(in srgb, #ff6347 18%, #8b0000);
+  --background-modifier-box-shadow: color-mix(in srgb, #FFE4E1 15%, #8b0000);
+  --background-modifier-success: color-mix(in srgb, #DEB887 18%, #8b0000);
+  --background-modifier-error: color-mix(in srgb, #FF6347 18%, #8b0000);
+  --background-modifier-error-hover: color-mix(in srgb, #FF6347 28%, #8b0000);
+  --background-modifier-cover: color-mix(in srgb, #8b0000 82%, #ffffff);
   --text-normal: #FFE4E1;
   --text-muted: #BC8F8F;
   --text-faint: #8B4513;
-  --text-selection: #cd2626;
   --text-on-accent: #8b0000;
+  --text-on-accent-inverted: #FFE4E1;
+  --text-selection: #cd2626;
+  --text-highlight-bg: color-mix(in srgb, #cdb7b5 65%, #8b0000);
+  --text-highlight-bg-active: color-mix(in srgb, #cdb7b5 52%, #8b0000);
   --text-accent: #ff6347;
   --text-accent-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
   --text-error: #FF6347;
   --text-warning: #FFD700;
   --text-success: #DEB887;
+  --text-info: #F08080;
+  --text-hint: #DDA0DD;
+  --interactive-normal: #0d0d0d;
+  --interactive-hover: color-mix(in srgb, #ff6347 12%, #8b0000);
   --interactive-accent: #ff6347;
   --interactive-accent-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
+  --interactive-success: #DEB887;
+  --interactive-warning: #FFD700;
+  --interactive-error: #FF6347;
+  --color-accent: #ff6347;
+  --color-accent-1: color-mix(in srgb, #ff6347 90%, #ffffff);
+  --color-accent-2: color-mix(in srgb, #ff6347 80%, #ffffff);
+  --color-red: #FF6347;
+  --color-orange: #FFD700;
+  --color-yellow: #FFD700;
+  --color-green: #DEB887;
+  --color-cyan: #F08080;
+  --color-blue: #DDA0DD;
+  --color-purple: #f08080;
+  --color-pink: #FF7F50;
+  --accent-h: 9;
+  --accent-s: 100%;
+  --accent-l: 64%;
   --link-color: #ff6347;
   --link-color-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
   --link-external-color: #cdb7b5;
   --link-external-color-hover: color-mix(in srgb, #cdb7b5 90%, #ffffff);
   --link-unresolved-color: #BC8F8F;
+  --link-unresolved-opacity: 0.8;
   --inline-title-color: #cdb7b5;
   --h1-color: #ff6347;
   --h2-color: #ff6347;
@@ -34,32 +81,110 @@ body {
   --h6-color: #ff6347;
   --code-background: #0d0d0d;
   --code-normal: #FFE4E1;
+  --code-comment: #BC8F8F;
+  --code-function: #F4A460;
+  --code-important: #FF7F50;
+  --code-keyword: #FFD700;
+  --code-operator: #cd853f;
+  --code-property: #DDA0DD;
+  --code-punctuation: #cd853f;
+  --code-string: #ffe4e1;
+  --code-tag: #FF7F50;
+  --code-value: #ffe4e1;
+  --code-blue: #DDA0DD;
+  --code-red: #FF6347;
+  --code-green: #DEB887;
+  --code-orange: #FFD700;
+  --code-purple: #f08080;
   --blockquote-border-color: #8B4513;
   --hr-color: #8B4513;
   --tag-color: #ff6347;
+  --tag-color-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
   --tag-background: color-mix(in srgb, #ff6347 88%, #8b0000);
   --tag-background-hover: color-mix(in srgb, #ff6347 80%, #8b0000);
   --checkbox-color: #ff6347;
+  --checkbox-color-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
   --checkbox-marker-color: #8b0000;
-  --text-highlight-bg: color-mix(in srgb, #cdb7b5 65%, #8b0000);
+  --checklist-done-color: #BC8F8F;
+  --list-marker-color: #BC8F8F;
   --titlebar-background: #0d0d0d;
   --titlebar-background-focused: #0d0d0d;
   --titlebar-text-color: #BC8F8F;
   --ribbon-background: #0d0d0d;
+  --ribbon-background-collapsed: #8b0000;
   --status-bar-background: #0d0d0d;
   --status-bar-text-color: #BC8F8F;
+  --tab-text-color: #BC8F8F;
+  --tab-text-color-active: #FFE4E1;
+  --tab-background-active: #8b0000;
+  --tab-outline-color: #8B4513;
+  --nav-item-color: #BC8F8F;
+  --nav-item-color-hover: #FFE4E1;
+  --nav-item-color-active: #ff6347;
+  --nav-item-background-hover: color-mix(in srgb, #FFE4E1 6%, #8b0000);
+  --nav-item-background-active: color-mix(in srgb, #ff6347 12%, #8b0000);
+  --icon-color: #BC8F8F;
+  --icon-color-hover: #FFE4E1;
+  --icon-color-active: #ff6347;
+  --icon-color-focused: #cdb7b5;
   --scrollbar-thumb-bg: color-mix(in srgb, #8B4513 50%, transparent);
   --scrollbar-active-thumb-bg: #8B4513;
+  --graph-line: #8B4513;
+  --graph-node: #BC8F8F;
+  --graph-node-focused: #ff6347;
+  --graph-node-tag: #cdb7b5;
+  --graph-node-attachment: #DDA0DD;
+  --graph-node-unresolved: #FF6347;
+  --canvas-background: #8b0000;
+  --canvas-card-label-color: #FFE4E1;
+  --canvas-color-1: #ff6347;
+  --canvas-color-2: #cdb7b5;
+  --canvas-color-3: #DEB887;
+  --canvas-color-4: #FFD700;
+  --canvas-color-5: #FF6347;
+  --canvas-color-6: #DDA0DD;
+  --callout-default: #BC8F8F;
+  --callout-info: #F08080;
+  --callout-tip: #DEB887;
+  --callout-success: #DEB887;
+  --callout-warning: #FFD700;
+  --callout-error: #FF6347;
+  --callout-bug: #FF6347;
+  --callout-example: #DDA0DD;
+  --callout-quote: #BC8F8F;
+  --diff-removed: #ff6347;
+  --diff-added: #98FB98;
+  --diff-modified: #F4A460;
 }
 
-.cm-cursor { border-left-color: #FFD700; }
+/* Obsidian's editor is CodeMirror 6; Prism .token selectors do not cover it. */
+.cm-editor .cm-comment, .cm-editor .cm-line .cm-comment { color: #BC8F8F; font-style: italic; }
+.cm-editor .cm-string, .cm-editor .cm-string-2, .cm-editor .cm-quote { color: #ffe4e1; }
+.cm-editor .cm-number, .cm-editor .cm-atom { color: #ffe4e1; }
+.cm-editor .cm-bool, .cm-editor .cm-qualifier, .cm-editor .cm-meta { color: #f08080; }
+.cm-editor .cm-keyword, .cm-editor .cm-control { color: #FFD700; }
+.cm-editor .cm-def, .cm-editor .cm-function, .cm-editor .cm-variableName.cm-function { color: #F4A460; font-weight: bold; }
+.cm-editor .cm-operator, .cm-editor .cm-punctuation { color: #cd853f; }
+.cm-editor .cm-type, .cm-editor .cm-className, .cm-editor .cm-builtin { color: #DDA0DD; }
+.cm-editor .cm-tagName, .cm-editor .cm-tag { color: #FF7F50; }
+.cm-editor .cm-propertyName, .cm-editor .cm-attributeName { color: #DDA0DD; }
+.cm-editor .cm-variableName { color: #FFE4E1; }
+.cm-editor .cm-invalidchar, .cm-editor .cm-error { color: #FF6347; text-decoration: underline wavy; }
+.cm-editor .cm-formatting, .cm-editor .cm-formatting-list, .cm-editor .cm-formatting-header { color: #BC8F8F; }
+.cm-editor .cm-link, .cm-editor .cm-url { color: #ff6347; }
+.cm-editor .cm-hashtag, .cm-editor .cm-hmd-frontmatter { color: #cdb7b5; }
 
-.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #BC8F8F; font-style: italic; }
-.token.string, .token.char, .token.attr-value, .token.regex { color: #ffe4e1; }
-.token.number { color: #ffe4e1; }
-.token.constant, .token.boolean, .token.symbol { color: #f08080; }
-.token.keyword, .token.important, .token.atrule { color: #FFD700; }
-.token.function { color: #F4A460; font-weight: bold; }
-.token.operator, .token.punctuation { color: #cd853f; }
-.token.class-name, .token.builtin, .token.attr-name, .token.selector { color: #DDA0DD; }
-.token.tag { color: #FF7F50; }
+.cm-editor .cm-cursor, .cm-editor .cm-dropCursor { border-left-color: #FFD700; }
+.cm-editor .cm-selectionBackground, .cm-editor .cm-content ::selection { background: #cd2626; }
+.cm-editor .cm-activeLine, .cm-editor .cm-activeLineGutter { background: color-mix(in srgb, #0d0d0d 55%, #8b0000); }
+.markdown-rendered mark, .cm-editor .cm-highlight { background: color-mix(in srgb, #cdb7b5 65%, #8b0000); }
+.markdown-rendered blockquote { border-inline-start-color: #8B4513; }
+.markdown-rendered hr { border-color: #8B4513; }
+.markdown-rendered a.internal-link { color: #ff6347; }
+.markdown-rendered a.external-link { color: #cdb7b5; }
+.markdown-rendered code, .cm-editor .cm-inline-code { background: #0d0d0d; color: #FFE4E1; }
+.markdown-rendered pre, .markdown-rendered .callout { border-color: #8B4513; }
+.markdown-rendered .callout[data-callout=info] { --callout-color: #F08080; }
+.markdown-rendered .callout[data-callout=warning] { --callout-color: #FFD700; }
+.markdown-rendered .callout[data-callout=error] { --callout-color: #FF6347; }
+.markdown-rendered .callout[data-callout=success], .markdown-rendered .callout[data-callout=tip] { --callout-color: #DEB887; }
