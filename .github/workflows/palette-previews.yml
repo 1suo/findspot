@@ -1,15 +1,14 @@
-name: Generate palette previews
+name: Generate ports and screenshots
 
 on:
   push:
-    branches: [master]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: palette-previews-${{ github.ref }}
+  group: generated-outputs-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -23,25 +22,22 @@ jobs:
       - uses: leafo/gh-actions-lua@v10
         with:
           luaVersion: "5.4"
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Regenerate ports and composer
+      - name: Install screenshot dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y alacritty neovim xvfb imagemagick fonts-dejavu-core
+      - name: Regenerate application ports
         run: lua scripts/generate.lua
-      - name: Install Chromium
+      - name: Capture real Alacritty + Neovim sessions
+        run: xvfb-run -a -s "-screen 0 1280x900x24" bash scripts/screenshots.sh
+      - name: Commit generated ports and screenshots
         run: |
-          npm install --no-save playwright
-          npx playwright install --with-deps chromium
-      - name: Render palette screenshots
-        run: node scripts/screenshots.mjs
-      - name: Commit generated files and screenshots
-        run: |
-          if git diff --quiet; then
-            echo "Generated outputs are already up to date."
+          git add colors ports tools/composer.html screenshots
+          if git diff --cached --quiet; then
+            echo "Generated files are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add colors ports tools/composer.html screenshots
-          git commit -m "chore: refresh generated ports and palette previews [skip ci]"
+          git commit -m "chore: regenerate ports and application screenshots"
           git push
