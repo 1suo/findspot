@@ -103,7 +103,6 @@ body.theme-dark {
   --tag-background: color-mix(in srgb, #7CFC00 6%, #013220);
   --tag-border-color: color-mix(in srgb, #7CFC00 20%, #013220);
   --tag-background-hover: color-mix(in srgb, #7CFC00 10%, #013220);
-  --tag-border-color: color-mix(in srgb, #7CFC00 20%, #013220);
   --checkbox-color: #7CFC00;
   --checkbox-color-hover: color-mix(in srgb, #7CFC00 90%, #ffffff);
   --checkbox-marker-color: #013220;
