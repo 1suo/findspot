@@ -44,7 +44,7 @@ Available names: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, 
 
 **Alacritty:** import the palette you want from `ports/alacritty/` into your Alacritty configuration.
 
-**Obsidian:** copy a `.css` file from `ports/obsidian/` to your vault's `.obsidian/snippets/` directory. Enable it in *Settings → Appearance → CSS snippets*. The Alexandria, Knossos, and Tikal palettes are light; Babylon, Petra, and Troy are dark. Set Obsidian's base color scheme to match the snippet.
+**Obsidian:** copy a `.css` file from `ports/obsidian/` to your vault's `.obsidian/snippets/` directory. Enable it in *Settings → Appearance → CSS snippets*. Alexandria and Knossos are light palettes; Babylon, Petra, Tikal, and Troy are dark. Set Obsidian's base color scheme to match the snippet.
 
 Obsidian snippets style the app's theme variables and selected editor/preview elements. Plugins and community themes can override individual rules; this is not a full replacement for an Obsidian theme.
 
