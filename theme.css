@@ -141,7 +141,6 @@ body.theme-light.findspot-palette-alexandria {
   --tag-background: color-mix(in srgb, #B22222 6%, #FFFAFA);
   --tag-border-color: color-mix(in srgb, #B22222 20%, #FFFAFA);
   --tag-background-hover: color-mix(in srgb, #B22222 10%, #FFFAFA);
-  --tag-border-color: color-mix(in srgb, #B22222 20%, #FFFAFA);
   --checkbox-color: #B22222;
   --checkbox-color-hover: color-mix(in srgb, #B22222 90%, #000000);
   --checkbox-marker-color: #FFFAFA;
@@ -335,7 +334,6 @@ body.theme-dark.findspot-palette-babylon {
   --tag-background: color-mix(in srgb, #faebd7 6%, #191970);
   --tag-border-color: color-mix(in srgb, #faebd7 20%, #191970);
   --tag-background-hover: color-mix(in srgb, #faebd7 10%, #191970);
-  --tag-border-color: color-mix(in srgb, #faebd7 20%, #191970);
   --checkbox-color: #faebd7;
   --checkbox-color-hover: color-mix(in srgb, #faebd7 90%, #ffffff);
   --checkbox-marker-color: #191970;
@@ -529,7 +527,6 @@ body.theme-light.findspot-palette-knossos {
   --tag-background: color-mix(in srgb, #FF6347 6%, #FAEBD7);
   --tag-border-color: color-mix(in srgb, #FF6347 20%, #FAEBD7);
   --tag-background-hover: color-mix(in srgb, #FF6347 10%, #FAEBD7);
-  --tag-border-color: color-mix(in srgb, #FF6347 20%, #FAEBD7);
   --checkbox-color: #FF6347;
   --checkbox-color-hover: color-mix(in srgb, #FF6347 90%, #000000);
   --checkbox-marker-color: #8b2323;
@@ -723,7 +720,6 @@ body.theme-dark.findspot-palette-petra {
   --tag-background: color-mix(in srgb, #ff6347 6%, #8b0000);
   --tag-border-color: color-mix(in srgb, #ff6347 20%, #8b0000);
   --tag-background-hover: color-mix(in srgb, #ff6347 10%, #8b0000);
-  --tag-border-color: color-mix(in srgb, #ff6347 20%, #8b0000);
   --checkbox-color: #ff6347;
   --checkbox-color-hover: color-mix(in srgb, #ff6347 90%, #ffffff);
   --checkbox-marker-color: #8b0000;
@@ -917,7 +913,6 @@ body.theme-dark.findspot-palette-tikal {
   --tag-background: color-mix(in srgb, #7CFC00 6%, #013220);
   --tag-border-color: color-mix(in srgb, #7CFC00 20%, #013220);
   --tag-background-hover: color-mix(in srgb, #7CFC00 10%, #013220);
-  --tag-border-color: color-mix(in srgb, #7CFC00 20%, #013220);
   --checkbox-color: #7CFC00;
   --checkbox-color-hover: color-mix(in srgb, #7CFC00 90%, #ffffff);
   --checkbox-marker-color: #013220;
@@ -1111,7 +1106,6 @@ body.theme-dark.findspot-palette-troy {
   --tag-background: color-mix(in srgb, #FF6347 6%, #000000);
   --tag-border-color: color-mix(in srgb, #FF6347 20%, #000000);
   --tag-background-hover: color-mix(in srgb, #FF6347 10%, #000000);
-  --tag-border-color: color-mix(in srgb, #FF6347 20%, #000000);
   --checkbox-color: #FF6347;
   --checkbox-color-hover: color-mix(in srgb, #FF6347 90%, #ffffff);
   --checkbox-marker-color: #000000;
