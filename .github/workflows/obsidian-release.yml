@@ -31,7 +31,7 @@ jobs:
         run: |
           lua scripts/generate.lua
           lua scripts/package-obsidian.lua
-          version="$(lua -e 'local f=assert(io.open("manifest.json")); local s=f:read("*a"); print(assert(s:match('"version"%s*:%s*"([0-9]+%.[0-9]+%.[0-9]+)"')))' )"
+          version="$(jq -r .version manifest.json)"
           tag="${GITHUB_REF_NAME}"
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then tag="${{ inputs.tag }}"; fi
           if [[ "$version" != "$tag" ]]; then
