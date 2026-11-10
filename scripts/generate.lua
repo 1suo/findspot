@@ -24,6 +24,12 @@ local function mix(color, pct, target)
   return string.format("color-mix(in srgb, %s %d%%, %s)", color, 100 - pct, target)
 end
 
+local function contrast_ratio(a, b)
+  local la, lb = luminance(a), luminance(b)
+  local lighter, darker = math.max(la, lb), math.min(la, lb)
+  return (lighter + 0.05) / (darker + 0.05)
+end
+
 local function hsl(hex)
   local r = tonumber(hex:sub(2, 3), 16) / 255
   local g = tonumber(hex:sub(4, 5), 16) / 255
@@ -299,6 +305,8 @@ local function generate_obsidian(p)
   local u, a, s, st, d = p.ui, p.accent, p.syntax, p.status, p.diff
   local light = luminance(u.background) > 0.2
   local target = light and "#000000" or "#ffffff"
+  local on_accent = contrast_ratio(a.primary, u.background) >= contrast_ratio(a.primary, u.foreground)
+    and u.background or u.foreground
   local accent_h, accent_s, accent_l = hsl(a.primary)
   local hover = function(c) return mix(c, 10, target) end
   local tint = function(c, pct) return mix(c, pct, u.background) end
@@ -327,11 +335,11 @@ local function generate_obsidian(p)
     "--background-modifier-success: " .. tint(st.success, 82),
     "--background-modifier-error: " .. tint(st.error, 82),
     "--background-modifier-error-hover: " .. tint(st.error, 72),
-    "--background-modifier-cover: " .. tint(u.background, 18),
+    "--background-modifier-cover: " .. mix(u.background, 18, target),
     "--text-normal: " .. u.foreground,
     "--text-muted: " .. u.muted,
     "--text-faint: " .. u.border,
-    "--text-on-accent: " .. u.background,
+    "--text-on-accent: " .. on_accent,
     "--text-on-accent-inverted: " .. u.foreground,
     "--text-selection: " .. u.selection,
     "--text-highlight-bg: " .. tint(a.secondary, 35),
@@ -402,7 +410,7 @@ local function generate_obsidian(p)
     "--tag-background-hover: " .. tint(a.primary, 20),
     "--checkbox-color: " .. a.primary,
     "--checkbox-color-hover: " .. hover(a.primary),
-    "--checkbox-marker-color: " .. u.background,
+    "--checkbox-marker-color: " .. on_accent,
     "--checklist-done-color: " .. u.muted,
     "--list-marker-color: " .. u.muted,
     "--titlebar-background: " .. u.surface,
