@@ -1,6 +1,6 @@
 # findspot
 
-A small family of opinionated, semantic color palettes for Neovim, Alacritty, and Obsidian.
+A small family of opinionated **Neovim colorschemes** and matching semantic color palettes for Alacritty and Obsidian.
 
 The palettes are authored once in TOML and exported by `scripts/generate.lua`. The goal is a coherent, low-friction color language across editor, terminal, and notes—not a collection of unrelated theme files.
 
@@ -103,7 +103,7 @@ GitHub Actions regenerates the ports and refreshes the palette preview images on
 
 Suggested GitHub repository topics: `neovim`, `neovim-colorscheme`, `vim-colorscheme`, `alacritty`, `alacritty-theme`, `obsidian`, `obsidian-theme`, `color-scheme`, `colorscheme`, `terminal-theme`.
 
-If you use findspot with [Vim Colorschemes](https://vimcolorschemes.com/), please consider submitting the Neovim port there as a separate listing. The canonical source and installation instructions remain in this repository.
+[Vim Colorschemes](https://vimcolorschemes.com/about) discovers GitHub repositories daily. It currently asks projects to have at least one star and to mention “vim” or “neovim” plus a colorscheme keyword in the README or repository description. findspot has one star; this README now explicitly identifies it as a Neovim colorscheme. If it is not indexed after the next discovery cycle, [open an issue with the repository link](https://github.com/vimcolorschemes/vimcolorschemes/issues). The canonical source and installation instructions remain in this repository.
 
 ## License
 
