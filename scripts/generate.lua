@@ -24,6 +24,23 @@ local function mix(color, pct, target)
   return string.format("color-mix(in srgb, %s %d%%, %s)", color, 100 - pct, target)
 end
 
+local function hsl(hex)
+  local r = tonumber(hex:sub(2, 3), 16) / 255
+  local g = tonumber(hex:sub(4, 5), 16) / 255
+  local b = tonumber(hex:sub(6, 7), 16) / 255
+  local maxc, minc = math.max(r, g, b), math.min(r, g, b)
+  local delta = maxc - minc
+  local light = (maxc + minc) / 2
+  local hue, sat = 0, 0
+  if delta ~= 0 then
+    sat = delta / (1 - math.abs(2 * light - 1))
+    if maxc == r then hue = 60 * (((g - b) / delta) % 6)
+    elseif maxc == g then hue = 60 * ((b - r) / delta + 2)
+    else hue = 60 * ((r - g) / delta + 4) end
+  end
+  return hue, sat, light
+end
+
 local function read_palette(path)
   local file = assert(io.open(path, "r"))
   local palette = {}
@@ -282,6 +299,7 @@ local function generate_obsidian(p)
   local u, a, s, st, d = p.ui, p.accent, p.syntax, p.status, p.diff
   local light = luminance(u.background) > 0.2
   local target = light and "#000000" or "#ffffff"
+  local accent_h, accent_s, accent_l = hsl(a.primary)
   local hover = function(c) return mix(c, 10, target) end
   local tint = function(c, pct) return mix(c, pct, u.background) end
   local vars = {
@@ -321,9 +339,9 @@ local function generate_obsidian(p)
     "--interactive-success: " .. st.success,
     "--interactive-warning: " .. st.warning,
     "--interactive-error: " .. st.error,
-    "--accent-h: " .. tostring(math.floor(0)),
-    "--accent-s: " .. tostring(0) .. "%",
-    "--accent-l: " .. tostring(0) .. "%",
+    "--accent-h: " .. tostring(math.floor(accent_h + 0.5)),
+    "--accent-s: " .. tostring(math.floor(accent_s * 100 + 0.5)) .. "%",
+    "--accent-l: " .. tostring(math.floor(accent_l * 100 + 0.5)) .. "%",
     "--link-color: " .. a.primary,
     "--link-color-hover: " .. hover(a.primary),
     "--link-external-color: " .. a.secondary,
