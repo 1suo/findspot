@@ -54,6 +54,7 @@ The TOML files in `palettes/` are the source of truth. Generated files should no
 
 ```sh
 lua scripts/generate.lua
+lua scripts/package-obsidian.lua
 ```
 
 This regenerates the Neovim colorschemes, Alacritty palettes, Obsidian snippets, and palette composer. CI also packages `theme.css` and commits it with the other generated outputs.
