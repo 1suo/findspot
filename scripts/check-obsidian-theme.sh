@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euxo pipefail
+set -euo pipefail
 
 test -s theme.css
 grep -Fq 'id: findspot-palette' theme.css
