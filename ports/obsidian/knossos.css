@@ -98,10 +98,12 @@ body.theme-light {
   --code-purple: #C71585;
   --blockquote-border-color: #8b7355;
   --hr-color: #8b7355;
-  --tag-color: #FF6347;
-  --tag-color-hover: color-mix(in srgb, #FF6347 90%, #000000);
-  --tag-background: color-mix(in srgb, #FF6347 88%, #FAEBD7);
-  --tag-background-hover: color-mix(in srgb, #FF6347 80%, #FAEBD7);
+  --tag-color: #8b2323;
+  --tag-color-hover: #8b2323;
+  --tag-background: color-mix(in srgb, #FF6347 6%, #FAEBD7);
+  --tag-background-hover: color-mix(in srgb, #FF6347 10%, #FAEBD7);
+  --tag-border-color: color-mix(in srgb, #FF6347 20%, #FAEBD7);
+  --tag-background-hover: color-mix(in srgb, #FF6347 10%, #FAEBD7);
   --checkbox-color: #FF6347;
   --checkbox-color-hover: color-mix(in srgb, #FF6347 90%, #000000);
   --checkbox-marker-color: #8b2323;
