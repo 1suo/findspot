@@ -56,8 +56,16 @@ for _, p in ipairs(palettes) do
       -- Preserve no leading blank lines.
     else
       if line == "}" then inside_vars = true end
-      if inside_vars and line:match("^%s*[^/%s].*%s+{") then
-        line = "body.theme-" .. p.mode .. ".findspot-palette-" .. p.slug .. " " .. line
+      if inside_vars then
+        local selectors, rule = line:match("^(.-)(%s*{.*)$")
+        if selectors and not selectors:match("^%s*/") then
+          local scoped = {}
+          for selector in selectors:gmatch("[^,]+") do
+            scoped[#scoped + 1] = "body.theme-" .. p.mode .. ".findspot-palette-" .. p.slug
+              .. " " .. selector:gsub("^%s+", "")
+          end
+          line = table.concat(scoped, ", ") .. rule
+        end
       end
       lines[#lines + 1] = line
     end
