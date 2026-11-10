@@ -20,9 +20,8 @@ try {
   for (const name of palettes) {
     await page.locator("#palette-select").selectOption({ label: name });
     await page.locator("#term .term-body").waitFor();
-    await page.screenshot({
+    await page.locator("#term").screenshot({
       path: resolve(output, name.toLowerCase() + ".png"),
-      fullPage: false,
     });
     console.log("Rendered " + name);
   }
