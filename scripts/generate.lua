@@ -404,10 +404,11 @@ local function generate_obsidian(p)
     "--code-purple: " .. s.constant,
     "--blockquote-border-color: " .. u.border,
     "--hr-color: " .. u.border,
-    "--tag-color: " .. a.primary,
-    "--tag-color-hover: " .. hover(a.primary),
-    "--tag-background: " .. tint(a.primary, 12),
-    "--tag-background-hover: " .. tint(a.primary, 20),
+    "--tag-color: " .. u.foreground,
+    "--tag-color-hover: " .. u.foreground,
+    "--tag-background: " .. tint(a.primary, 94),
+    "--tag-background-hover: " .. tint(a.primary, 90),
+    "--tag-border-color: " .. tint(a.primary, 80),
     "--checkbox-color: " .. a.primary,
     "--checkbox-color-hover: " .. hover(a.primary),
     "--checkbox-marker-color: " .. on_accent,
@@ -553,6 +554,22 @@ local function emit_composer(payload)
   write("tools/composer.html", html)
 end
 
+local function swapped_palette(p)
+  local copy = {}
+  for section, values in pairs(p) do
+    if type(values) == "table" then
+      copy[section] = {}
+      for key, value in pairs(values) do copy[section][key] = value end
+    else
+      copy[section] = values
+    end
+  end
+
+  copy.ui.background, copy.ui.surface = p.ui.surface, p.ui.background
+  copy.meta.name = p.meta.name .. " Swapped"
+  return copy
+end
+
 local embedded = {}
 
 local pipe = assert(io.popen(
@@ -564,12 +581,19 @@ for path in pipe:lines() do
   validate(palette)
 
   local name = slug(palette.meta.name)
+  local swapped = swapped_palette(palette)
+  local swapped_name = name .. "-swapped"
 
   write(nvim_dir .. "/findspot-" .. name .. ".lua", generate_nvim(palette))
   write(alacritty_dir .. "/" .. name .. ".toml", generate_alacritty(palette))
   write(obsidian_dir .. "/" .. name .. ".css", generate_obsidian(palette))
 
+  write(nvim_dir .. "/findspot-" .. swapped_name .. ".lua", generate_nvim(swapped))
+  write(alacritty_dir .. "/" .. swapped_name .. ".toml", generate_alacritty(swapped))
+  write(obsidian_dir .. "/" .. swapped_name .. ".css", generate_obsidian(swapped))
+
   embedded[#embedded + 1] = palette_json(palette)
+  embedded[#embedded + 1] = palette_json(swapped)
 end
 
 pipe:close()
