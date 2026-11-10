@@ -46,8 +46,10 @@ for _, p in ipairs(palettes) do
 
   local selector = "body.theme-" .. p.mode .. " {"
   local scoped = "body.theme-" .. p.mode .. ".findspot-palette-" .. p.slug .. " {"
-  local replaced = css:gsub(selector, scoped, 1)
-  assert(replaced ~= css, "Expected mode selector not found in " .. path)
+  local selector_start = css:find(selector, 1, true)
+  assert(selector_start, "Expected mode selector not found in " .. path)
+  local replaced = css:sub(1, selector_start - 1)
+    .. scoped .. css:sub(selector_start + #selector)
 
   local lines = {}
   local inside_vars = false
