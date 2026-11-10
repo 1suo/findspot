@@ -1,0 +1,47 @@
+name: Generate palette previews
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: palette-previews-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: "5.4"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Regenerate ports and composer
+        run: lua scripts/generate.lua
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Render palette screenshots
+        run: node scripts/screenshots.mjs
+      - name: Commit generated files and screenshots
+        run: |
+          if git diff --quiet; then
+            echo "Generated outputs are already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add colors ports tools/composer.html screenshots
+          git commit -m "chore: refresh generated ports and palette previews [skip ci]"
+          git push
