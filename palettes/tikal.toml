@@ -1,0 +1,40 @@
+[meta]
+name = "Tikal"
+
+[ui]
+background = "#013220"
+surface = "#080808"
+foreground = "#F5DEB3"
+muted = "#2f4f4f"
+border = "#2f4f4f"
+selection = "#458b74"
+cursor = "#FFD700"
+
+[accent]
+primary = "#7CFC00"
+secondary = "#DAA520"
+
+[syntax]
+comment = "#228b22"
+string = "#F0E68C"
+number = "#f0e68c"
+function = "#7CFC00"
+keyword = "#FFD700"
+type = "#ff6347"
+constant = "#bdb76b"
+operator = "#cd853f"
+preprocessor = "#528b8b"
+special = "#FF8C00"
+
+[status]
+error = "#ff3030"
+warning = "#FFD700"
+success = "#7CFC00"
+info = "#BDB76B"
+hint = "#40E0D0"
+
+[diff]
+added = "#ADFF2F"
+changed = "#DAA520"
+removed = "#CD5C5C"
+

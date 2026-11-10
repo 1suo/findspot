@@ -1,0 +1,40 @@
+[meta]
+name = "Troy"
+
+[ui]
+background = "#000000"
+surface = "#201006"
+foreground = "#faebd7"
+muted = "#8b4513"
+border = "#333333"
+selection = "#8b4513"
+cursor = "#00FF7F"
+
+[accent]
+primary = "#FF6347"
+secondary = "#FFD700"
+
+[syntax]
+comment = "#8b4513"
+string = "#cdc0b0"
+number = "#cdc0b0"
+function = "#ffd700"
+keyword = "#ff6347"
+type = "#cd853f"
+constant = "#bdb76b"
+operator = "#8b8378"
+preprocessor = "#f0e68c"
+special = "#8b8378"
+
+[status]
+error = "#FF0000"
+warning = "#FFD700"
+success = "#00fa9a"
+info = "#BDB76B"
+hint = "#f0e68c"
+
+[diff]
+added = "#7CFC00"
+changed = "#CD853F"
+removed = "#FF6347"
+

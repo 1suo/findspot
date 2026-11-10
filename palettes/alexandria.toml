@@ -1,0 +1,39 @@
+[meta]
+name = "Alexandria"
+
+[ui]
+background = "#FFFAFA"
+surface = "#FFFAFA"
+foreground = "#2F4F4F"
+muted = "#696969"
+border = "#708090"
+selection = "#2F4F4F"
+cursor = "#8B0000"
+
+[accent]
+primary = "#B22222"
+secondary = "#008080"
+
+[syntax]
+comment = "#708090"
+string = "#228B22"
+number = "#008B8B"
+function = "#4169E1"
+keyword = "#B8860B"
+type = "#800080"
+constant = "#191970"
+operator = "#8B008B"
+preprocessor = "#8B4513"
+special = "#C71585"
+
+[status]
+error = "#8B0000"
+warning = "#DAA520"
+success = "#228B22"
+info = "#008080"
+hint = "#483D8B"
+
+[diff]
+added = "#2E8B57"
+changed = "#6495ED"
+removed = "#CD5C5C"

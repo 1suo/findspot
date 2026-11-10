@@ -1,0 +1,40 @@
+[meta]
+name = "Knossos"
+
+[ui]
+background = "#FAEBD7"
+surface = "#eedfcc"
+foreground = "#8b2323"
+muted = "#cdb79e"
+border = "#8b7355"
+selection = "#ff7f50"
+cursor = "#FF0000"
+
+[accent]
+primary = "#FF6347"
+secondary = "#1a1a1a"
+
+[syntax]
+comment = "#cdaa7d"
+string = "#CD853F"
+number = "#E34234"
+function = "#FF6347"
+keyword = "#800080"
+type = "#DAA520"
+constant = "#C71585"
+operator = "#8B4513"
+preprocessor = "#556B2F"
+special = "#B8860B"
+
+[status]
+error = "#E34234"
+warning = "#DAA520"
+success = "#FF6347"
+info = "#800080"
+hint = "#20B2AA"
+
+[diff]
+added = "#2E8B57"
+changed = "#D2691E"
+removed = "#B22222"
+

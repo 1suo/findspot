@@ -1,0 +1,40 @@
+[meta]
+name = "Petra"
+
+[ui]
+background = "#8b0000"
+surface = "#0d0d0d"
+foreground = "#FFE4E1"
+muted = "#BC8F8F"
+border = "#8B4513"
+selection = "#cd2626"
+cursor = "#FFD700"
+
+[accent]
+primary = "#ff6347"
+secondary = "#cdb7b5"
+
+[syntax]
+comment = "#BC8F8F"
+string = "#ffe4e1"
+number = "#ffe4e1"
+function = "#F4A460"
+keyword = "#FFD700"
+type = "#DDA0DD"
+constant = "#f08080"
+operator = "#cd853f"
+preprocessor = "#98fb98"
+special = "#FF7F50"
+
+[status]
+error = "#FF6347"
+warning = "#FFD700"
+success = "#DEB887"
+info = "#F08080"
+hint = "#DDA0DD"
+
+[diff]
+added = "#98FB98"
+changed = "#F4A460"
+removed = "#ff6347"
+

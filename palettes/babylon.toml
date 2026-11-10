@@ -1,0 +1,40 @@
+[meta]
+name = "Babylon"
+
+[ui]
+background = "#191970"
+surface = "#0f0f0f"
+foreground = "#FFF8DC"
+muted = "#6A5ACD"
+border = "#6A5ACD"
+selection = "#6a5acd"
+cursor = "#FFD700"
+
+[accent]
+primary = "#faebd7"
+secondary = "#00ffff"
+
+[syntax]
+comment = "#6A5ACD"
+string = "#faebd7"
+number = "#faebd7"
+function = "#00ffff"
+keyword = "#ffd700"
+type = "#1e90ff"
+constant = "#b8860b"
+operator = "#cdc0b0"
+preprocessor = "#ff6a6a"
+special = "#ff6a6a"
+
+[status]
+error = "#ff4040"
+warning = "#FFFF00"
+success = "#00FFFF"
+info = "#1E90FF"
+hint = "#cdc0b0"
+
+[diff]
+added = "#00FA9A"
+changed = "#6495ED"
+removed = "#ff4040"
+
