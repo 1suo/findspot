@@ -61,18 +61,18 @@ local function scoped_css(p, source_suffix, class_suffix)
 
   local lines = {}
   local inside_vars = false
-  for line in (replaced .. "\\n"):gmatch("(.-)\\n") do
+  for line in (replaced .. "\n"):gmatch("(.-)\n") do
     if line == "" and #lines == 0 then
       -- Preserve no leading blank lines.
     else
       if line == "}" then inside_vars = true end
       if inside_vars then
-        local selectors, rule = line:match("^(.-)(%\\s*{.*)$")
-        if selectors and not selectors:match("^%\\s*/") then
+        local selectors, rule = line:match("^(.-)(%s*{.*)$")
+        if selectors and not selectors:match("^%s*/") then
           local scoped_selectors = {}
           for selector_part in selectors:gmatch("[^,]+") do
             scoped_selectors[#scoped_selectors + 1] = scope
-              .. " " .. selector_part:gsub("^%\\s+", "")
+              .. " " .. selector_part:gsub("^%s+", "")
           end
           line = table.concat(scoped_selectors, ", ") .. rule
         end
@@ -80,7 +80,7 @@ local function scoped_css(p, source_suffix, class_suffix)
       lines[#lines + 1] = line
     end
   end
-  return table.concat(lines, "\\n")
+  return table.concat(lines, "\n")
 end
 
 for _, p in ipairs(palettes) do
@@ -91,6 +91,6 @@ for _, p in ipairs(palettes) do
 end
 
 local target = assert(io.open("theme.css", "w"))
-target:write(table.concat(out, "\\n"))
+target:write(table.concat(out, "\n"))
 target:close()
 print("Generated theme.css with six palettes and a background/surface toggle")
