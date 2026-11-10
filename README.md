@@ -44,7 +44,7 @@ Available names: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, 
 
 **Alacritty:** import the palette you want from `ports/alacritty/` into your Alacritty configuration.
 
-**Obsidian:** install *Findspot* from Community Themes. The theme includes Alexandria, Babylon, Knossos, Petra, Tikal, and Troy. Install the optional [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings) plugin to switch palettes in *Settings → Style Settings → Findspot*. Alexandria and Knossos are light palettes; Babylon, Petra, Tikal, and Troy are dark. Match Obsidian's base color scheme to the selected palette.
+**Obsidian:** once the Community Directory listing is approved, install *Findspot* from Community Themes. The theme includes Alexandria, Babylon, Knossos, Petra, Tikal, and Troy. Install the optional [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings) plugin to switch palettes in *Settings → Style Settings → Findspot*. Alexandria and Knossos are light palettes; Babylon, Petra, Tikal, and Troy are dark. Match Obsidian's base color scheme to the selected palette.
 
 The generated `ports/obsidian/` CSS files remain available as standalone snippets. The community theme package is assembled from those same generated files, with palette selectors scoped so they do not override one another.
 
