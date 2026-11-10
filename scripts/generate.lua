@@ -481,6 +481,7 @@ local function generate_obsidian(p)
     "",
     light and "body.theme-light {" or "body.theme-dark {",
   }
+  for _, v in ipairs(base_vars) do out[#out + 1] = "  " .. v .. ";" end
   for _, v in ipairs(vars) do out[#out + 1] = "  " .. v .. ";" end
   out[#out + 1] = "}"
   out[#out + 1] = ""
