@@ -1,39 +1,16 @@
 # findspot
 
-A small family of opinionated **Neovim colorschemes** and matching semantic color palettes for Alacritty and Obsidian.
+Six colorschemes for Neovim, with matching palettes for Alacritty and Obsidian.
 
-The palettes are authored once in TOML and exported by `scripts/generate.lua`. The goal is a coherent, low-friction color language across editor, terminal, and notes—not a collection of unrelated theme files.
+![Alexandria colorscheme preview](screenshots/alexandria.png)
 
-![findspot palette gallery](screenshots/alexandria.png)
+**Alexandria** · **Babylon** · **Knossos** · **Petra** · **Tikal** · **Troy**
 
-## Palettes
+More previews: [Alexandria](screenshots/alexandria.png) · [Babylon](screenshots/babylon.png) · [Knossos](screenshots/knossos.png) · [Petra](screenshots/petra.png) · [Tikal](screenshots/tikal.png) · [Troy](screenshots/troy.png)
 
-| Palette | Preview |
-| --- | --- |
-| Alexandria | ![Alexandria](screenshots/alexandria.png) |
-| Babylon | ![Babylon](screenshots/babylon.png) |
-| Knossos | ![Knossos](screenshots/knossos.png) |
-| Petra | ![Petra](screenshots/petra.png) |
-| Tikal | ![Tikal](screenshots/tikal.png) |
-| Troy | ![Troy](screenshots/troy.png) |
+## Neovim
 
-Screenshots are rendered from the live palette composer in CI. They are illustrative previews, not screenshots of every target application.
-
-## Supported ports
-
-| Target | Format | Location | Status |
-| --- | --- | --- | --- |
-| Neovim | Lua colorschemes | [`colors/`](colors/) | Implemented; primary development target |
-| Alacritty | TOML color imports | [`ports/alacritty/`](ports/alacritty/) | Generated; needs validation in Alacritty |
-| Obsidian | CSS snippets | [`ports/obsidian/`](ports/obsidian/) | Generated; community-theme-level UI coverage is not claimed |
-
-All generated files are outputs. Edit the TOML palettes, then regenerate.
-
-## Installation
-
-### Neovim
-
-Add this repository to your plugin manager, for example with lazy.nvim:
+Install with [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
@@ -46,65 +23,26 @@ Add this repository to your plugin manager, for example with lazy.nvim:
 }
 ```
 
-Choose any installed colorscheme: `findspot-alexandria`, `findspot-babylon`, `findspot-knossos`, `findspot-petra`, `findspot-tikal`, or `findspot-troy`.
+Replace `alexandria` with `babylon`, `knossos`, `petra`, `tikal`, or `troy`.
 
-### Alacritty
+## Other ports
 
-Copy the palette file you want into your Alacritty configuration tree, then import it from `alacritty.toml`:
+- **Alacritty:** import a palette from `ports/alacritty/` in your `alacritty.toml`.
+- **Obsidian:** copy a CSS file from `ports/obsidian/` into your vault's `.obsidian/snippets/`, then enable it under *Settings → Appearance → CSS snippets*.
 
-```toml
-[general]
-import = ["~/.config/alacritty/findspot-alexandria.toml"]
-```
+These ports are experimental and have not had the same amount of in-app testing as the Neovim colorschemes. Feedback and screenshots are welcome.
 
-The files use Alacritty's `[colors.*]` TOML schema. Terminal ANSI colors are necessarily an approximation of the semantic editor palette.
+## Development
 
-### Obsidian
-
-These are **CSS snippets**, not installable Obsidian community themes. For the selected palette:
-
-1. Copy `ports/obsidian/<palette>.css` to `<vault>/.obsidian/snippets/`.
-2. Open **Settings → Appearance → CSS snippets**.
-3. Enable the snippet.
-4. Set **Base color scheme** to the Light or Dark mode indicated in the generated file header.
-
-The snippet styles Obsidian's shared CSS variables, Markdown preview, and CodeMirror editor tokens. Obsidian plugins and future app releases may introduce UI surfaces or selectors that need additional mapping. If something looks unthemed, please open an issue with an example and your Obsidian version.
-
-## Palette schema
-
-Each `palettes/*.toml` file defines semantic roles in these sections:
-
-- `ui`: background, surface, foreground, muted text, borders, selection, cursor
-- `accent`: primary and secondary accents
-- `syntax`: language-token colors
-- `status`: error, warning, success, info, hint
-- `diff`: added, changed, removed
-
-## Generate ports
-
-Requirements: Lua 5.1+ (or LuaJIT) and a POSIX-like shell.
+Palette definitions live in `palettes/*.toml`. Generated files should not be edited directly.
 
 ```sh
 lua scripts/generate.lua
 ```
 
-This regenerates `colors/`, `ports/alacritty/`, `ports/obsidian/`, and `tools/composer.html`. Do not edit generated files by hand.
+This updates the Neovim, Alacritty, Obsidian, and composer outputs.
 
-## Contributing and validation
+## Links
 
-- Change the source palette in `palettes/`.
-- Run the generator and include all generated diffs.
-- Check Neovim, Alacritty, and Obsidian in their actual applications before describing a port as verified.
-- Include app/version, OS, and a screenshot when reporting a rendering issue.
-
-GitHub Actions regenerates the ports and refreshes the palette preview images on pushes to the default branch. The previews are produced from the composer, so they are useful for palette comparison but do not replace application-level testing.
-
-## Discovery
-
-Suggested GitHub repository topics: `neovim`, `neovim-colorscheme`, `vim-colorscheme`, `alacritty`, `alacritty-theme`, `obsidian`, `obsidian-theme`, `color-scheme`, `colorscheme`, `terminal-theme`.
-
-[Vim Colorschemes](https://vimcolorschemes.com/about) discovers GitHub repositories daily. It currently asks projects to have at least one star and to mention “vim” or “neovim” plus a colorscheme keyword in the README or repository description. findspot has one star; this README now explicitly identifies it as a Neovim colorscheme. If it is not indexed after the next discovery cycle, [open an issue with the repository link](https://github.com/vimcolorschemes/vimcolorschemes/issues). The canonical source and installation instructions remain in this repository.
-
-## License
-
-No license file is currently present. Until a license is added, users should not assume the repository grants permission to redistribute or modify the code.
+- [Palette composer](tools/composer.html)
+- [Issues and feedback](https://github.com/1suo/findspot/issues)
