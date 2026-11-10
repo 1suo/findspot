@@ -457,7 +457,7 @@ local function generate_obsidian(p)
     " * Settings -> Appearance -> CSS snippets.",
     " * Set Appearance -> Base color scheme: " .. (light and "Light. */" or "Dark. */"),
     "",
-    "body {",
+    light and "body.theme-light {" or "body.theme-dark {",
   }
   for _, v in ipairs(vars) do out[#out + 1] = "  " .. v .. ";" end
   out[#out + 1] = "}"
